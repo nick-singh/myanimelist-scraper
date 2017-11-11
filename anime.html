@@ -1,0 +1,2080 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head><style type="text/css">
+    body.ownlist {
+          background-image: url("https://myanimelist.cdn-dena.com/s/common/uploaded_files/1455540188-934a8b8942494df1086f9402bbb5330b.png");
+              background-attachment: fixed;
+              background-position: center top;
+              background-repeat: repeat\2D x;
+        }
+
+        #advanced-options {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    background-color: #F6F6F6;
+    display: none;
+    width: 860px;
+    margin: 0 auto;
+    padding: 25px 0px 30px;
+    border: #EBEBEB 1px solid;
+    -moz-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3);
+    -o-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3);
+    -ms-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3);
+    color: #323232;
+    text-align: left;
+    font-family: 'Helvetica neue', Helvetica, "lucida grande", tahoma, verdana, arial, sans-serif;
+    z-index: 1101;
+}
+#advanced-options .advanced-options-header {
+    width: 750px;
+    margin: 0px auto;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #BEBEBE;
+    font-size: 16px;
+}
+
+#advanced-options .advanced-options-header .description {
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 8px;
+}
+
+#advanced-options select {
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(/img/pc/ownlist/icon_pulldown_triangle.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 18px 8px;
+    background-color: #FFFFFF;
+    display: inline-block;
+    height: 25px;
+    padding: 4px 20px 4px 4px;
+    padding-right: 4px\0;
+    border: #BEBEBE 1px solid;
+    border-radius: 0px;
+    font-size: 12px;
+}
+#advanced-options select::-ms-expand {
+    display: none;
+}
+
+#advanced-options select:disabled {
+    background-image: url(/img/pc/ownlist/icon_pulldown_triangle_disable.png);
+    color: #9B9B9B;
+}
+
+#advanced-options input[type=text] {
+    padding: 4px;
+    border: #BEBEBE 1px solid;
+}
+
+#advanced-options input:focus {
+    outline: none;
+}
+
+/* sort */
+#advanced-options .sort-widget {
+    margin: 0px auto;
+    padding: 12px 0px 0px;
+    width: 750px;
+}
+#advanced-options .sort-widget:last-of-type {
+    padding-bottom: 45px;
+}
+
+#advanced-options .sort-widget select {
+    width: 172px;
+    margin-right: 8px;
+}
+
+#advanced-options .sort-widget input[type=radio] {
+    display: none;
+}
+#advanced-options .sort-widget input[type=radio] + label {
+    background-color: #FFFFFF;
+    display: inline-block;
+    width: 56px;
+    padding: 5px 0px;
+    border: #BEBEBE 1px solid;
+    border-radius: 4px;
+    color: #323232;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+#advanced-options .sort-widget input[type=radio]:checked + label {
+    background-color: #4065BA;
+    border: #4065BA 1px solid;
+    color: #FFFFFF;
+}
+#advanced-options .sort-widget input[type=radio]:disabled + label {
+    border: #BEBEBE 1px solid;
+    color: #9B9B9B;
+}
+#advanced-options .sort-widget input[type=radio]:checked:disabled + label {
+    background-color: #FFFFFF;
+    border: #BEBEBE 1px solid;
+    color: #9B9B9B;
+}
+
+/* filter */
+#advanced-options .filter-widget {
+    margin: 0px auto;
+    padding: 12px 0px 0;
+    width: 750px;
+}
+
+#advanced-options .filter-widget select {
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+#advanced-options .filter-widget.title input[type=text] {
+    width: 360px;
+}
+
+#advanced-options .filter-widget.airing-status select,
+#advanced-options .filter-widget.publishing-status select {
+    width: 152px;
+}
+
+#advanced-options .filter-widget.producer select,
+#advanced-options .filter-widget.magazine select {
+    width: 360px;
+}
+
+#advanced-options .filter-widget.aired-date select.year,
+#advanced-options .filter-widget.published-date select.year {
+    width: 80px;
+}
+
+#advanced-options .filter-widget.aired-date select.month,
+#advanced-options .filter-widget.published-date select.month,
+#advanced-options .filter-widget.aired-date select.day,
+#advanced-options .filter-widget.published-date select.day {
+    width: 60px;
+}
+
+#advanced-options .filter-widget.aired-date .text,
+#advanced-options .filter-widget.published-date .text {
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 12px;
+}
+
+#advanced-options .filter-widget.aired-season select.year {
+    width: 80px;
+}
+
+#advanced-options .filter-widget.aired-season select.season {
+    width: 110px;
+}
+
+#advanced-options .sort-widget .widget-header,
+#advanced-options .filter-widget .widget-header {
+    display: inline-block;
+    width: 110px;
+    font-size: 12px;
+    font-family: 'Helvetica neue', Helvetica, "lucida grande", tahoma, verdana, arial, sans-serif;
+}
+
+#advanced-options .sort-widget:last-of-type,
+#advanced-options .filter-widget:last-of-type {
+    padding-bottom: 40px;
+}
+
+#advanced-options .advanced-options-button {
+    width: 750px;
+    margin: 0px auto;
+    padding: 12px 0px 0px;
+    border-top: 1px solid #BEBEBE;
+    text-align: center;
+}
+
+#advanced-options .btn-apply,
+#advanced-options .btn-clear {
+    background-color: rgba(64, 101, 186, 1);
+    display: inline-block;
+    width: 135px;
+    margin: 0 4px;
+    padding: 6px 0px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: center;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out
+}
+
+#advanced-options .btn-apply:hover,
+#advanced-options .btn-clear:hover {
+  background-color: rgba(64, 101, 186, 0.8);
+}
+
+
+/**
+ * General Styles
+ */
+
+body {
+    margin: 0 0 0 0;
+    text-align: center;
+    font-family: Verdana, Arial;
+    font-size: 11px;
+}
+
+td {
+    line-height: 1.5em;
+}
+
+a {
+    color: #1d439b;
+    text-decoration: none;
+}
+
+#footer-block {
+    padding: 15px 0;
+    background-color: #2E51A2;
+    color: #FFFFFF;
+    font-family: Avenir, "lucida grande", tahoma, verdana, arial, sans-serif;
+}
+
+#copyright {
+    font-size: 12px;
+    color: #9caed9;
+    padding-top: 3px;
+    text-align: center;
+}
+
+
+/*
+ * Header
+ */
+.header a {
+    font-weight: bold;
+    color: #fff;
+}
+.header a:hover {
+    text-decoration: underline;
+}
+
+.header {
+    position: relative;
+    color: #fff;
+    display: block;
+    width: 1060px;
+    height: 70px;
+    margin: 0 auto
+}
+
+.header .header-title {
+    position: absolute;
+    top: 21px;
+    background-image: url("/img/pc/ownlist/logo_mal.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto 36px;
+    display: block;
+    width: 240px;
+    height: 36px;
+    text-indent: -9999px;
+    overflow: hidden
+}
+
+.header .header-menu {
+    position: absolute;
+    top: 25px;
+    right: 4px
+}
+.header .header-menu.other {
+    top: 18px;
+}
+
+.header .header-menu .btn-menu {
+    display: block;
+    text-align: right;
+    font-size: 16px;
+}
+
+.header .header-menu .header-info {
+    font-size: 1.0em;
+    margin-top: 6px;
+    margin-right: 15px;
+    text-align: right;
+}
+
+.header .username {
+    font-weight: bold;
+}
+
+.header .header-menu .list-menu {
+    position: absolute;
+    top: 25px;
+    right: -4px;
+    background-color: #ffffff;
+    display: none;
+    border: #2E51A2 1px solid;
+    -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px;
+    z-index: 1;
+}
+
+.header .header-menu .list-menu .icon-menu {
+    display: block;
+    width: 150px;
+    height: 30px;
+    color: #2E51A2;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out
+}
+
+.header .header-menu .list-menu .icon-menu:hover {
+    background-color: #e1e7f5
+}
+
+.header .header-menu .list-menu .icon-menu svg.icon {
+    position: absolute;
+    fill: #2E51A2;
+    left: 12px;
+    top: 4px;
+}
+
+.header .header-menu .list-menu .icon-menu .text {
+    position: absolute;
+    left: 52px;
+    top: 6px;
+}
+
+/**
+ * Floating Menu
+ */
+.list-menu-float {
+    position: fixed;
+    display: block;
+    top: 20%;
+    width: 50px;
+    border: #EBEBEB 1px solid;
+    z-index: 2
+}
+
+.list-menu-float .icon-menu {
+    position: relative;
+    background-color: #f6f6f6;
+    display: block;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+/* SVG */
+.list-menu-float .icon-menu svg.icon {
+    position: absolute;
+    fill: #323232;
+}
+.list-menu-float .icon-menu:hover svg.icon {
+    position: absolute;
+    fill: #ffffff;
+}
+
+.list-menu-float .icon-menu.profile {
+    background-size: cover;
+}
+
+.list-menu-float .icon-menu.quick-add {}
+.list-menu-float .icon-menu.quick-add svg.icon-quick-add {
+    left: 13px;
+    top: 12px;
+}
+
+.list-menu-float .icon-menu.anime-list {}
+.list-menu-float .icon-menu.anime-list svg.icon-anime-list {
+    left: 13px;
+    top: 12px;
+}
+
+.list-menu-float .icon-menu.manga-list {}
+.list-menu-float .icon-menu.manga-list svg.icon-manga-list {
+    left: 13px;
+    top: 12px;
+}
+
+.list-menu-float .icon-menu.history {}
+.list-menu-float .icon-menu.history svg.icon-history {
+    left: 13px;
+    top: 12px;
+}
+
+.list-menu-float .icon-menu.export {}
+.list-menu-float .icon-menu.export svg.icon-export {
+    left: 13px;
+    top: 12px;
+}
+
+.list-menu-float .icon-menu.login {}
+.list-menu-float .icon-menu.login svg.icon-login {
+    left: 13px;
+    top: 12px;
+}
+
+.list-menu-float .icon-menu.logout {}
+.list-menu-float .icon-menu.logout svg.icon-logout {
+    left: 13px;
+    top: 14px;
+}
+
+.list-menu-float .icon-menu.setting {}
+.list-menu-float .icon-menu.setting svg.icon-setting {
+    left: 13px;
+    top: 13px;
+}
+
+.list-menu-float .icon-menu .text {
+    position: absolute;
+    top: 14px;
+    left: 50px;
+    width: 0;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 1.4em;
+    font-family: 'Helvetica neue', Helvetica, "lucida grande", tahoma, verdana, arial, sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out
+}
+
+.list-menu-float .icon-menu:not(.profile):hover {
+    background-color: #4065BA;
+    width: 145px;
+}
+
+.list-menu-float .icon-menu:hover .text {
+    width: 94px;
+    opacity: 1
+}
+
+/* setting */
+.list-menu-float .icon-menu.setting .text {
+    top: 0px;
+    width: 0px;
+    height: 100px;
+    opacity: 0;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out
+}
+.list-menu-float .icon-menu.setting:hover .text {
+    top: 0px;
+    width: 114px;
+    height: 100px;
+    opacity: 1
+}
+
+.list-menu-float .icon-menu.setting .text .link-list-setting,
+.list-menu-float .icon-menu.setting .text .link-style-setting {
+    display: block;
+    opacity: 0;
+}
+
+.list-menu-float .icon-menu.setting:hover .text .link-list-setting,
+.list-menu-float .icon-menu.setting:hover .text .link-style-setting {
+    position: absolute;
+    background-color: #4065BA;
+    display: block;
+    width: 110px;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 1;
+}
+.list-menu-float .icon-menu.setting:hover .text .link-list-setting {
+    top: 0px;
+}
+
+.list-menu-float .icon-menu.setting:hover .text .link-style-setting {
+    border-top: #EBEBEB 1px solid;
+    top: 50px;
+}
+
+
+/**
+ * List Container
+ */
+
+.list-container {
+    position: relative;
+    background-color: #ffffff;
+    border: #EBEBEB 1px solid;
+    width: 1058px;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+}
+
+/**
+ * List Container - Cover Block
+ */
+.cover-block {
+    display: block;
+    width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.cover-block .image-container {
+    display: table-cell;
+    padding-top: 16px;
+    width: 1024px;
+}
+
+.cover-block .image-container.hide {
+    display: none;
+}
+
+.cover-block .image-container img {
+    max-width: 1024px;
+}
+
+/* setting icon */
+.cover-block .image-container .btn-list-setting {
+    display: none;
+}
+
+.cover-block .image-container:hover .btn-list-setting {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    padding: 8px;
+    border: rgba(255,255,255,0) 1px solid;
+    font-size: 14px;
+    color: #ffffff;
+    font-family: 'Helvetica neue', Helvetica, "lucida grande", tahoma, verdana, arial, sans-serif;
+}
+
+.cover-block .image-container .btn-list-setting:hover {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    background-color: rgba(0,0,0,0.6);
+    padding: 8px;
+    border: #ffffff 1px solid;
+    -moz-box-shadow: 0 0 4px #000000;
+    -webkit-box-shadow: 0 0 4px #000000;
+    -o-box-shadow: 0 0 4px #000000;
+    -ms-box-shadow: 0 0 4px #000000;
+    box-shadow: 0 0 4px #000000;
+    font-size: 14px;
+    color: #ffffff;
+    text-shadow: #323232 1px 1px 1px;
+}
+
+.cover-block .image-container .btn-list-setting .fa-camera {
+    font-size: 16px;
+    -moz-text-shadow: #000000 1px 1px 3px;
+    -webkit-text-shadow: #000000 1px 1px 3px;
+    -o-text-shadow: #000000 1px 1px 3px;
+    -ms-text-shadow: #000000 1px 1px 3px;
+    text-shadow: #000000 1px 1px 3px;
+    -ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(color=#000000,offx=1,offy=1)";
+}
+
+.cover-block .image-container .btn-list-setting .icon-plus-circle {
+    position: absolute;
+    top: 4px;
+    left: 18px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 50%;
+    -moz-box-shadow: -1px 1px 0px 0px #323232;
+    -webkit-box-shadow: -1px 1px 0px 0px #323232;
+    -o-box-shadow: -1px 1px 0px 0px #323232;
+    -ms-box-shadow: -1px 1px 0px 0px #323232;
+    box-shadow: -1px 1px 0px 0px #323232;
+    font-size: 10px;
+}
+
+.cover-block .image-container .btn-list-setting .text {
+  display: none;
+}
+
+.cover-block .image-container .btn-list-setting:hover .text {
+  display: inline-block;;
+  margin-left: 4px;
+}
+
+/**
+ * List Container - Status Menu
+ */
+.status-menu-container {
+    width: 1058px;
+    height: 46px;
+    background-color: #FFF;
+    border-bottom: #EBEBEB 1px solid;
+    z-index: 1
+}
+
+.status-menu-container.fixed {
+    position: fixed;
+    display: block;
+    top: 0;
+}
+
+.status-menu-container.fixed + div.list-block {
+    margin-top: 62px;
+}
+
+.status-menu-container .status-menu {
+    display: table;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 40px 0;
+}
+
+.status-menu-container .status-menu .status-button {
+    position: relative;
+    display: table-cell;
+    padding: 12px 0;
+    margin: 0;
+    font-family: 'Helvetica neue', Helvetica, "lucida grande", tahoma, verdana, arial, sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.6em;
+    color: #9B9B9B;
+}
+
+.status-menu-container .status-menu .status-button.on {
+    color: #787878;
+    font-weight: bold;
+}
+
+.status-menu-container .status-menu .status-button:after {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: #4065BA;
+    display: block;
+    width: 100%;
+    height: 4px;
+    content: '';
+    opacity: 0;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+.status-menu-container .status-menu .status-button.on:after, .status-menu .status-button:hover:after {
+    opacity: 1
+}
+
+/**
+ * List Container - Status Menu - Search
+ */
+.status-menu-container .search-container {
+    position: absolute;
+    right: 18px;
+}
+.status-menu-container .search-container #search-button {
+    display: inline-block;
+    height: 22px;
+    margin-top: 15px;
+    color: #787878;
+    font-size: 1.6em;
+    vertical-align: middle;
+}
+
+.status-menu-container .search-container #search-box {
+    display: inline-block;
+    width: 0;
+    height: 22px;
+    overflow: hidden;
+    margin-top: 13px;
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    transition: width 0.3s;
+    -webkit-backface-visibility: hidden;
+    vertical-align: middle;
+}
+
+.status-menu-container .search-container #search-box.open {
+    display: inline-block;
+    width: 100px;
+}
+
+.status-menu-container .search-container #search-box input {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/**
+ * List Container - List Block
+ */
+.list-block {
+    margin-top: 16px;
+    min-height: 600px;
+    padding: 0
+}
+
+.list-unit {
+    display: block;
+    margin: 0 auto;
+    width: 1024px
+}
+
+/**
+ * List Container - List Status Title (with Stats)
+ */
+.list-unit .list-status-title {
+    position: relative;
+    display: table;
+    background-color: #4065BA;
+    width: 1024px;
+    height: 38px
+}
+
+.list-unit .list-status-title .text {
+    display: table-cell;
+    width: 1024px;
+    height: 38px;
+    font-size: 2.0em;
+    color: #FFF;
+    font-weight: bold;
+    font-family: 'Helvetica neue', Helvetica, "lucida grande", tahoma, verdana, arial, sans-serif;
+    text-align: center;
+    vertical-align: middle
+}
+
+.list-unit .list-status-title .stats {
+    position: absolute;
+    height: 38px;
+    line-height: 38px;
+    right: 4px;
+}
+
+.list-unit .list-status-title .stats a {
+    margin-right: 8px;
+    color: #FFF;
+}
+
+.list-unit .list-status-title .stats a.filterd {
+    text-shadow: 0px 0px 2px #FFF;
+}
+
+.list-unit .list-stats {
+    display: none;
+    background-color: #4065BA;
+    width: 1024px;
+    height: 30px;
+    line-height: 30px;
+    color: #FFF;
+    text-align: center;
+}
+
+
+/**
+ * List Container - List Table
+ */
+
+.list-table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: #EBEBEB 1px solid;
+}
+
+.list-table > tbody:nth-of-type(2n+1) {
+    background-color: #fcfcfc;
+}
+
+
+/**
+ * List Container - List Table - Header
+ */
+
+.list-table .list-table-header .header-title {
+    background: #F6F6F6 url("/img/pc/ownlist/bar-table-header.png") no-repeat right 7px / 1px 22px;
+    display: table-cell;
+    border-bottom: #EBEBEB 1px solid;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.list-table .list-table-header .header-title:last-child {
+    background-image: none;
+}
+
+.list-table .list-table-header .header-title.status {
+    background-image: none;
+    width: 4px
+}
+
+.list-table .list-table-header .header-title.number {
+    width: 30px
+}
+
+.list-table .list-table-header .header-title.image {
+    width: 66px
+}
+
+.list-table .list-table-header .header-title.title {
+    padding-left: 8px;
+    text-align: left
+}
+
+.list-table .list-table-header .header-title.score {
+    width: 65px
+}
+
+.list-table .list-table-header .header-title.type {
+    width: 60px
+}
+
+.list-table .list-table-header .header-title.progress {
+    width: 90px
+}
+
+.list-table .list-table-header .header-title.chapters {
+    width: 90px
+}
+
+.list-table .list-table-header .header-title.volumes {
+    width: 90px
+}
+
+.list-table .list-table-header .header-title.tags {
+    width: 120px
+}
+
+.list-table .list-table-header .header-title.rated {
+    width: 70px
+}
+
+.list-table .list-table-header .header-title.started {
+    width: 110px
+}
+
+.list-table .list-table-header .header-title.finished {
+    width: 110px
+}
+
+.list-table .list-table-header .header-title.days {
+    width: 45px
+}
+
+.list-table .list-table-header .header-title.storage {
+    width: 75px
+}
+
+.list-table .list-table-header .header-title.retail {
+    width: 65px;
+}
+
+.list-table .list-table-header .header-title.priority {
+    width: 70px
+}
+
+.list-table .list-table-header .header-title .link {
+    font-size: 11px;
+    color: #323232;
+    text-decoration: none
+}
+
+.list-table .list-table-header .header-title .link.sort {
+    position: relative;
+    display: inline-block;
+    color: #323232;
+    white-space: nowrap;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out
+}
+
+.list-table .list-table-header .header-title .link.sort:hover {
+    color: #2556c6
+}
+
+.list-table .list-table-header .header-title .sort-icon {
+    color: #1d439b;
+}
+
+
+/**
+ * List Container - List Table - Items
+ */
+
+.list-table .list-table-data .data {
+    display: table-cell;
+    padding: 4px 0;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: #EBEBEB 1px solid
+}
+
+.list-table .list-table-data a:not(.edit-disabled):hover {
+    text-decoration: underline;
+}
+
+.list-table .list-table-data a.edit-disabled {
+    cursor: text;
+    color: black;
+}
+
+.list-table .list-table-data .tags .edit {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #2db039;
+    font-size: 10px;
+    font-family: 'Helvetica neue', Helvetica, "lucida grande", tahoma, verdana, arial, sans-serif;
+}
+
+.list-table .list-table-data .tags .edit:hover {
+    color: green !important;
+}
+
+.list-table .list-table-data .tags textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+}
+
+.list-table .list-table-data .data.image a {
+    display: inline-block;
+}
+.list-table .list-table-data .data.image .image {
+    width: 48px;
+    height: 68px;
+    border: #EBEBEB 1px solid
+}
+
+.list-table .list-table-data .data.title {
+    padding-left: 8px;
+    text-align: left;
+    word-wrap: break-word
+}
+
+.list-table .list-table-data .data.title .link {
+    font-size: 1.1em;
+    font-weight: bold
+}
+
+.list-table .list-table-data .data.title .rewatching, .list-table .list-table-data .data.title .rereading, .list-table .list-table-data .data.title .content-status {
+    color: #BABABA;
+    font-size: 0.9em
+}
+
+.list-table .list-table-data .data.score .link {
+    font-size: 1.1em;
+    font-weight: bold
+}
+
+.list-table .list-table-data .data.title .add-edit-more {
+    float: right;
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+.list-table .list-table-data .data.title .more {
+    position: relative;
+}
+
+.list-table .more-info {
+    display: none;
+    border-bottom: #EBEBEB 1px solid;
+}
+
+.list-table .more-info .more-content {
+    padding: 10px;
+}
+
+.list-table .list-table-data .data.tags {
+    word-wrap: break-word
+}
+
+.list-table .list-table-data .data.status {
+    width: 4px
+}
+
+.list-table .list-table-data .data.status .text {
+    display: none
+}
+
+.list-table .list-table-data .data.status.reading, .list-table .list-table-data .data.status.watching {
+    background-color: #2db039
+}
+
+.list-table .list-table-data .data.status.plantoread, .list-table .list-table-data .data.status.plantowatch {
+    background-color: #c3c3c3
+}
+
+.list-table .list-table-data .data.status.completed {
+    background-color: #26448f
+}
+
+.list-table .list-table-data .data.status.onhold {
+    background-color: #f1c83e
+}
+
+.list-table .list-table-data .data.status.dropped {
+    background-color: #a12f31
+}
+
+.list-table .list-table-data .data.title {
+    padding-left: 8px;
+    text-align: left
+}
+
+.list-unit .loading-space {
+    margin: 8px;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+  </style>
+
+    <!--[if gte IE 10]><!-->
+  <style id="custom-css" type="text/css">
+        @import "https://dl.dropboxusercontent.com/s/o8eo51jzy2c8baj/Menus.css";
+@import "https://dl.dropboxusercontent.com/s/dyh79mellj0j4ms/CategoryMenu.css";
+@import "https://dl.dropboxusercontent.com/s/yuvh827j0fmiu6m/TopMenu.css";
+@font-face {
+	font-family: 'Questrial';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/questrial/v6/MYWJ4lYm5dbZ1UBuYox79FtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+}
+
+@-webkit-keyframes Slide {
+	from { margin-top: -50%; }
+	to { margin-top: 0; }
+}
+
+@keyframes Slide {
+	from { margin-top: -50%; }
+	to { margin-top: 0; }
+}
+
+@-webkit-keyframes Show {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes Show {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+
+body.ownlist {
+	font-family: 'Questrial';
+	font-size: 14px;
+	background-color: rgb(255, 255, 255);
+	background-image: url(http://i.imgur.com/911EVbT.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+}
+
+.list-container {
+	position: relative;
+	left: calc(100% - 750px);
+	margin: 0;
+	width: 750px;
+	text-align: left;
+	background-color: transparent;
+	border: none;
+}
+
+.list-block {
+	margin: 0;
+	min-height: 600px;
+	padding: 530px 0 1px 0;
+	background-image: url(http://i.imgur.com/KWtCjQn.png);
+	background-repeat: repeat-y;
+	background-position: center top;
+}
+
+.list-unit {
+	display: block;
+	margin: 0 0 0 40px;
+	width: 625px;
+}
+
+.cover-block {
+	pointer-events: none;
+	position: absolute;
+	display: block;
+	top: 64px;
+	margin: 0 auto;
+	width: 750px;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 2;
+}
+
+.cover-block .image-container {
+	display: block;
+	margin: 10px 0 0 145px;
+	width: 519px;
+	height: 400px;
+	padding: 0;
+	background-image: url(http://i.imgur.com/vhDCwK2.png);
+}
+
+.cover-block .image-container.hide { display: none; }
+
+.cover-block .image-container img { display: none; }
+
+td { line-height: 1.5em; }
+
+a {
+    color: #697c8d;
+    text-decoration: none;
+}
+
+.list-table {
+	width: 625px;
+	margin: 0;
+	border-collapse: collapse;
+	border: none;
+}
+
+.list-table > tbody:nth-of-type(2n+1) { background-color: transparent; }
+
+.list-table .list-item:after {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 0;
+	height: 1px;
+	background-color: rgb(217, 39, 65);
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+.list-table .list-item:hover:after { width: 80%; }
+
+.list-table .list-table-data .data {
+	display: table-cell;
+	padding: 4px 0;
+	vertical-align: middle;
+	color: #697c8d;
+	text-align: center;
+	border: none;
+}
+
+.list-table .list-table-data .data a { color: #697c8d; font-weight: normal !important; }
+
+.list-table .list-table-data .data a:hover { text-decoration: none !important; }
+
+.list-table .list-table-data a.edit-disabled {
+	cursor: text;
+	color: #697c8d;
+}
+
+.list-table .list-table-data .data.status { display: none; }
+
+.list-table .list-table-data .data.number { text-align: center; }
+
+
+.list-table .list-table-data .data.image a { display: inline-block; }
+
+.list-table .list-table-data .data.title {
+	padding: 0;
+	text-align: left;
+	word-wrap: break-word;
+}
+
+.list-table .list-table-data .data.title .link { width: calc(100% - 80px); }
+
+.list-table .list-table-data .data.title a { display: inline-block; }
+
+.list-table .list-table-data .data.title .add-edit-more:after {
+	pointer-events: none;
+	position: absolute;
+	display: block;
+	content: '';
+	margin-top: -20px;
+	width: 62px;
+	height: 20px;
+	background-image: -moz-linear-gradient(bottom, #ffffff 0, #ffffff 100%);
+	background-image: -webkit-linear-gradient(bottom, #ffffff 0, #ffffff 100%);
+	background-image: linear-gradient(to bottom, #ffffff 0, #ffffff 100%);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+.list-table .list-table-data:hover .data.title .add-edit-more:after {
+	background-position: 0 -20px;
+	-webkit-transition: all .3s ease-out .1s;
+	transition: all .3s ease-out .1s;
+}
+
+.list-table .list-table-data .data.title .add-edit-more {
+	margin-right: 10px;
+	font-size: 0.9em;
+	float: right;
+}
+
+.list-table .list-table-data .data.title .more { position: relative; }
+
+.list-table .more-info { display: none; border: none; }
+
+.borderRBL, .borderRBL a { color: #4dbbc5; }
+
+.borderRBL { opacity: 0; display: block; }
+
+.borderRBL a  { font-weight: bold; }
+
+.list-table .more-info[style="display: table-row;"] .borderRBL {
+	-webkit-animation: Slide .3s ease-out, Show .3s forwards ease-out .3s;
+	animation: Slide .3s ease-out, Show .3s forwards ease-out .3s;
+}
+
+/* HEADERS */
+.list-unit .list-status-title {
+	position: absolute;
+	display: table;
+	margin-top: -131px;
+	width: 625px;
+	height: 150px;
+	background-color: transparent;
+	background-image: url(http://i.imgur.com/a4cFOjk.png);
+	background-repeat: no-repeat;
+	z-index: 3;
+}
+
+.list-unit .list-status-title .text { display: none; }
+
+.list-unit.all_anime .list-status-title { background-position: 10px -750px; }
+
+.list-unit.watching .list-status-title, .list-unit.reading .list-status-title { background-position: 10px 0; }
+
+.list-unit.completed .list-status-title { background-position: 10px -150px; }
+
+.list-unit.onhold .list-status-title { background-position: 10px -300px; }
+
+.list-unit.dropped .list-status-title { background-position: 10px -450px; }
+
+.list-unit.plantowatch .list-status-title, .list-unit.plantoread .list-status-title { background-position: 10px -600px; }
+
+footer {
+	position: absolute;
+	right: 0;
+	margin: -37px 0 0 0;
+	width: 750px;
+}
+
+#footer-block {
+	padding: 0;
+	font-family: 'Questrial';
+	background-color: transparent;
+}
+
+#copyright {
+	position: absolute;
+	width: 625px;
+	margin: 0 0 0 40px;
+	padding: 10px 0 0 0;
+	font-size: 12px;
+	color: #4dbbc5;
+	text-align: center;
+	border-top: solid 1px #d92741;
+	z-index: 1;
+}
+
+#advanced-options:after {
+	pointer-events: none;
+	position: absolute;
+	display: block;
+	content: '';
+	left: 0;
+	top: 0;
+	width: 865px;
+	height: 550px;
+	background: url(http://i.imgur.com/L4bF1p7.png) no-repeat;
+}
+
+#advanced-options {
+	opacity: 0;
+	position: absolute;
+	display: none;
+	left: 0;
+	right: 0;
+	top: 24px;
+	margin: 0 auto;
+	width: 865px;
+	height: 550px;
+	padding: 70px 0 30px;
+	font-family: 'Questrial';
+	color: #e0cf89;
+	text-shadow: 0 0 .2em #392a36;
+	text-align: left;
+	background-color: transparent;
+	background: url(http://i.imgur.com/daIbGEc.png) no-repeat;
+	border: none;
+	box-shadow: none;
+	z-index: 1101;
+}
+
+#fancybox-overlay { opacity: 0; }
+
+#fancybox-overlay[style="display: block;"] {
+	opacity: .5;
+	background-color: rgb(80, 80, 80);
+}
+
+#fancybox-overlay[style="display: block;"], #advanced-options[style="display: block;"] {
+	-webkit-animation: Show .3s forwards ease-out;
+	animation: Show .3s forwards ease-out;
+}
+
+#advanced-options #fancybox-close {
+	position: absolute !important;
+	top: 5px !important;
+	right: 12px !important;
+	width: 32px !important;
+	height: 32px !important;
+	background: none !important;
+	cursor: pointer;
+	z-index: 1103;
+}
+
+#advanced-options .advanced-options-header {
+	width: 730px;
+	margin: 0px auto;
+	padding-bottom: 4px;
+	font-size: 16px;
+	border: none;
+	box-shadow: 0 1px 0 #392a36, 0 2px 0 #ad9b9b;
+}
+
+#advanced-options .advanced-options-header .description {
+	margin-left: 8px;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#advanced-options input[type=text], #advanced-options select,  #advanced-options select:disabled {
+	height: 21px;
+	padding: 0 2px;
+	color: #575442;
+	background-color: rgb(194, 182, 157);
+	border: solid 1px #392a36;
+}
+
+#advanced-options select:disabled { color: #6e6c5f; }
+
+#advanced-options select, #advanced-options select:disabled {
+	display: inline-block;
+	padding-right: 20px;
+	background-image: url(/img/pc/ownlist/icon_pulldown_triangle.png);
+	background-repeat: no-repeat;
+	background-position: center right;
+	background-size: 18px 8px;
+}
+
+#advanced-options select:disabled { background-color: rgb(173, 161, 149); }
+
+#advanced-options select option { color: #575442; }
+
+#advanced-options select::-ms-expand { display: none; }
+
+#advanced-options input:focus, #advanced-options select:focus { outline: none; }
+
+/* FILTER */
+#advanced-options .filter-widget {
+	margin: 0 auto;
+	width: 730px;
+	padding: 12px 0 0;
+}
+
+#advanced-options .filter-widget select {
+	margin-right: 8px;
+	font-size: 14px;
+}
+
+/* SORT */
+#advanced-options .sort-widget {
+	margin: 0px auto;
+	width: 730px;
+	padding: 12px 0 0;
+}
+
+#advanced-options .sort-widget:last-of-type { padding-bottom: 45px; }
+
+#advanced-options .sort-widget select {
+    width: 172px;
+    margin-right: 8px;
+}
+
+#advanced-options .sort-widget input[type=radio] { display: none; }
+
+#advanced-options .sort-widget input[type=radio] + label {
+	position: relative;
+	display: inline-block;
+	line-height: 24px;
+	padding: 0;
+	color: #b4b4b4;
+	text-shadow: 0 0 .2em #392a36;
+	text-align: left;
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+}
+
+#advanced-options .sort-widget input[type=radio]:disabled + label, #advanced-options .sort-widget input[type=radio]:checked + label, #advanced-options .sort-widget input[type=radio]:checked:disabled + label {
+	background-color: transparent;
+	border: none;
+}
+
+#advanced-options .sort-widget input[type=radio]:disabled + label, #advanced-options .sort-widget input[type=radio]:checked:disabled + label { color: #b4b4b4; }
+
+#advanced-options .sort-widget input[type=radio]:checked + label { color: #e0cf89; }
+
+
+#advanced-options .filter-widget.title input[type=text] { width: 360px; }
+
+#advanced-options .filter-widget.airing-status select,
+#advanced-options .filter-widget.publishing-status select {width: 152px; }
+
+#advanced-options .filter-widget.producer select,
+#advanced-options .filter-widget.magazine select { width: 360px; }
+
+#advanced-options .filter-widget.aired-date select.year,
+#advanced-options .filter-widget.published-date select.year { width: 80px; }
+
+#advanced-options .filter-widget.aired-date select.month,
+#advanced-options .filter-widget.published-date select.month,
+#advanced-options .filter-widget.aired-date select.day,
+#advanced-options .filter-widget.published-date select.day { width: 60px; }
+
+#advanced-options .filter-widget.aired-date .text,
+#advanced-options .filter-widget.published-date .text {
+	display: inline-block;
+	margin-right: 4px;
+	font-size: 14px;
+}
+
+#advanced-options .filter-widget.aired-season select.year { width: 80px; }
+
+#advanced-options .filter-widget.aired-season select.season { width: 110px; }
+
+#advanced-options .sort-widget .widget-header,
+#advanced-options .filter-widget .widget-header {
+	display: inline-block;
+	width: 110px;
+	font-family: 'Questrial';
+	font-size: 14px;
+}
+
+#advanced-options .sort-widget:last-of-type,
+#advanced-options .filter-widget:last-of-type { padding-bottom: 40px; }
+
+#advanced-options .advanced-options-button {
+	width: 730px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	border: none;
+	box-shadow: 0 -1px 0 #ad9b9b, 0 -2px 0 #392a36;
+}
+
+#advanced-options .btn-apply,
+#advanced-options .btn-clear {
+	position: relative;
+	display: inline-block;
+	top: -7px;
+	margin: 0 4px;
+	width: 150px;
+	height: 51px;
+	padding: 0;
+	font-size: 0;
+	color: 0;
+	background-color: transparent;
+	background-image: url(http://i.imgur.com/lAktqFm.png);
+	background-repeat: no-repeat;
+	border-radius: 0;
+}
+
+#advanced-options .btn-apply { background-position: 0 0; }
+
+#advanced-options .btn-clear { background-position: -150px 0; }
+
+#advanced-options .btn-apply:hover,
+#advanced-options .btn-clear:hover { background-color: transparent; }
+
+/* DESIGN SETTINGS BUTTON */
+.cover-block .image-container .btn-list-setting { display: none; }
+
+/**
+ * List Container - List Table - Items
+ */
+
+.list-table .list-table-data a:not(.edit-disabled):hover {
+    text-decoration: underline;
+}
+
+.list-table .list-table-data .tags .edit {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #2db039;
+    font-size: 10px;
+    font-family: 'Helvetica neue', Helvetica, "lucida grande", tahoma, verdana, arial, sans-serif;
+}
+
+.list-table .list-table-data .tags .edit:hover {
+    color: green !important;
+}
+
+.list-table .list-table-data .tags textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+}
+
+.list-table .list-table-data .data.title .rewatching, .list-table .list-table-data .data.title .rereading, .list-table .list-table-data .data.title .content-status {
+	opacity: 1;
+	position: absolute;
+	margin-left: 12px;
+	color: #4dbbc5;
+	font-size: 0.9em;
+	-webkit-transition: all .3s ease-out .1s;
+	transition: all .3s ease-out .1s;
+	z-index: 1;
+}
+
+.list-table .list-table-data:hover .data.title .rewatching, .list-table .list-table-data:hover .data.title .rereading, .list-table .list-table-data:hover .data.title .content-status {
+	opacity: 0;
+	-webkit-transition: all 0s ease-out;
+	transition: all 0s ease-out;
+}
+
+.list-table .list-table-data .data.tags { word-wrap: break-word; }
+
+.list-table .list-table-data .data.status.reading, .list-table .list-table-data .data.status.watching { background-color: #2db039; }
+
+.list-table .list-table-data .data.status.plantoread, .list-table .list-table-data .data.status.plantowatch { background-color: #c3c3c3; }
+
+.list-table .list-table-data .data.status.completed { background-color: #26448f; }
+
+.list-table .list-table-data .data.status.onhold { background-color: #f1c83e; }
+
+.list-table .list-table-data .data.status.dropped { background-color: #a12f31; }
+
+.list-unit .loading-space {
+    margin: 8px;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+      </style>
+  <!--<![endif]-->
+
+
+
+<title>
+Aruminde&#039;s Anime List - MyAnimeList.net
+</title>
+
+
+
+<meta name="keywords" content="anime, myanimelist, anime news, manga" />
+<link rel="canonical" href="https://myanimelist.net/animelist/Aruminde" />
+<meta property="og:locale" content="en_US"><meta property="fb:app_id" content="360769957454434"><meta property="og:site_name" content="MyAnimeList.net"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@myanimelist"><meta property="og:title" content=" Aruminde&#039;s Anime List - MyAnimeList.net "><meta property="og:image" content="https://myanimelist.cdn-dena.com/img/sp/icon/apple-touch-icon-256.png"><meta name="twitter:image:src" content="https://myanimelist.cdn-dena.com/img/sp/icon/apple-touch-icon-256.png"><meta property="og:url" content="https://myanimelist.net/animelist/Aruminde">
+<link rel="manifest" href="/manifest.json">
+
+<meta name='csrf_token' content='afa8fcfec8e49ab96bda93992ce24fe6b8365282'><link rel="stylesheet" type="text/css" href="https://myanimelist.cdn-dena.com/static/assets/css/pc/style-8777c515de.css" />
+
+<script type="text/javascript" src="https://myanimelist.cdn-dena.com/static/assets/js/pc/header-f683fc8fce.js"></script>
+<script type="text/javascript" src="https://myanimelist.cdn-dena.com/static/assets/js/pc/all-5a66e29c66.js"
+        id="alljs" data-params='{&quot;origin_url&quot;:&quot;https:\/\/myanimelist.net&quot;,&quot;is_request_bot_filter_log&quot;:false}' defer></script>
+
+
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://myanimelist.net/plugins/myanimelist.xml" title="MyAnimeList" />
+
+<link rel="shortcut icon" href="https://myanimelist.cdn-dena.com/images/faviconv5.ico" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-369102-1', 'auto');
+  ga('require', 'linkid'); // Enhanced Link Attribution
+  ga('send', 'pageview');
+</script>
+  <!-- ### Load GPT Library ### -->
+<script type='text/javascript'>
+ var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+               '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();</script>
+<script src="https://apis.google.com/js/platform.js" async defer>{lang: 'en-GB'}</script>
+<script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+
+</head>
+
+<body class="ownlist anime" data-work="anime" data-query="{&quot;status&quot;:2}" data-owner="" data-owner-id="3083477" data-owner-name="Aruminde">    <div id="advanced-options" class="anime">
+  <a id="fancybox-close" href="#" @click.prevent="closeAdvancedOptions" style="display: block;"></a>
+
+  <div class="filter">
+    <h2 class="advanced-options-header">
+      Filter <span class="description">Apply one or more filters to all titles on the list.</span>
+    </h2>
+    <div class="filter-widget title">
+      <span class="widget-header">Title</span>
+      <input v-model="title.current" type="text">
+    </div>
+    <div class="filter-widget airing-status">
+      <span class="widget-header">Status</span>
+      <select v-model="airingStatus.current">
+        <option v-for="option in airingStatus.options" :value="option.value">${ option.text }</option>
+      </select>
+    </div>
+    <div class="filter-widget producer">
+      <span class="widget-header">Producer</span>
+      <select v-model="producer.current">
+        <option v-for="option in producer.options" :value="option.value">${ option.text }</option>
+      </select>
+    </div>
+    <div class="filter-widget aired-date">
+      <span class="widget-header">Airing Dates</span>
+      <span class="text">Start:</span>
+      <select v-model="airedDate.current.from.year" class="year">
+        <option v-for="option in airedDate.options.year" :value="option.value">${ option.text }</option>
+      </select>
+      <select v-model="airedDate.current.from.month" :disabled="airedDate.current.from.year==0" class="month">
+        <option v-for="option in airedDate.options.month" :value="option.value">${ option.text }</option>
+      </select>
+      <select v-model="airedDate.current.from.day" :disabled="airedDate.current.from.year==0 || airedDate.current.from.month==0" class="day">
+        <option v-for="option in airedDate.options.day" :value="option.value">${ option.text }</option>
+      </select>
+      <span class="text">End:</span>
+      <select v-model="airedDate.current.to.year" class="year">
+        <option v-for="option in airedDate.options.year" :value="option.value">${ option.text }</option>
+      </select>
+      <select v-model="airedDate.current.to.month" :disabled="airedDate.current.to.year==0" class="month">
+        <option v-for="option in airedDate.options.month" :value="option.value">${ option.text }</option>
+      </select>
+      <select v-model="airedDate.current.to.day" :disabled="airedDate.current.to.year==0 || airedDate.current.to.month==0" class="day">
+        <option v-for="option in airedDate.options.day" :value="option.value">${ option.text }</option>
+      </select>
+    </div>
+    <div class="filter-widget aired-season">
+      <span class="widget-header">Season</span>
+      <select v-model="season.current.year" class="year">
+        <option v-for="option in season.options.year" :value="option.value">${ option.text }</option>
+      </select>
+      <select v-model="season.current.season" :disabled="season.current.year==0" class="season">
+        <option v-for="option in season.options.season" :value="option.value">${ option.text }</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="sort">
+    <h2 class="advanced-options-header">
+      Sort <span class="description">Choose one or two columns to be sorted in ascending or descending order.</span>
+    </h2>
+    <div class="sort-widget first">
+      <span class="widget-header">Primary</span>
+      <select v-model="sortFirst.current.value">
+        <option v-for="option in sortFirst.options" :value="option.value">${ option.text }</option>
+      </select>
+      <input type="radio" v-model="sortFirst.current.dir" :disabled="!sortFirst.current.value" id="sort-first-asc" value="asc"><label for="sort-first-asc"><i class="fa fa-sort-amount-asc"></i> Asc</label>
+      <input type="radio" v-model="sortFirst.current.dir" :disabled="!sortFirst.current.value" id="sort-first-desc" value="desc"><label for="sort-first-desc"><i class="fa fa-sort-amount-desc"></i> Desc</label>
+    </div>
+    <div class="sort-widget second">
+      <span class="widget-header">Secondary</span>
+      <select v-model="sortSecond.current.value" :disabled="!sortFirst.current.value">
+        <option v-for="option in sortSecond.options" :value="option.value">${ option.text }</option>
+      </select>
+      <input type="radio" v-model="sortSecond.current.dir" :disabled="!sortFirst.current.value || !sortSecond.current.value" id="sort-second-asc" value="asc"><label for="sort-second-asc"><i class="fa fa-sort-amount-asc"></i> Asc</label>
+      <input type="radio" v-model="sortSecond.current.dir" :disabled="!sortFirst.current.value || !sortSecond.current.value" id="sort-second-desc" value="desc"><label for="sort-second-desc"><i class="fa fa-sort-amount-desc"></i> Desc</label>
+    </div>
+  </div>
+
+  <div class="advanced-options-button">
+    <a href="javascript: void(0);" class="btn-apply" @click="applyFilter()">Apply</a>
+    <a href="javascript: void(0);" class="btn-clear" @click="clearFilter()">Clear</a>
+  </div>
+
+</div>
+
+    <div class="header">
+        <div class="header-menu other ">
+              <div class="btn-menu">
+          Viewing <a class="username" href="/profile/Aruminde">Aruminde</a>'s
+          <a href="javascript: void(0);" id="header-menu-button">
+            Anime List
+            <i class="fa fa-angle-down"></i>
+          </a>
+        </div>
+        <div class="header-info">
+                      0
+            <a href="/sharedanime.php?u1=Aruminde&u2=nicksingh">Shared Anime</a>,
+            0% Affinity
+            - <a href="/history/Aruminde"><i class="fa fa-history"></i> History</a>
+                  </div>
+        <div id="header-menu-dropdown" class="list-menu">
+                      <a class="icon-menu manga-list" href="/mangalist/Aruminde">
+              <svg class="icon icon-manga-list" width="22px" height="20px" viewBox="0 0 22 20" version="1.1">
+                <g>
+                  <path d="M2.20234783,18.8926957 C2.75913043,18.8926957 3.22256522,18.7076522 3.61165217,18.3177391 C4.00156522,17.9286522 4.1866087,17.4462174 4.1866087,16.8902609 C4.1866087,16.3524783 4.00156522,15.8890435 3.61165217,15.4991304 C3.22256522,15.1100435 2.75913043,14.925 2.20234783,14.925 C1.6463913,14.925 1.18295652,15.1100435 0.793043478,15.4991304 C0.403956522,15.8890435 0.218913043,16.3524783 0.218913043,16.8902609 C0.218913043,17.4462174 0.403956522,17.9286522 0.793043478,18.3177391 C1.18295652,18.7076522 1.6463913,18.8926957 2.20234783,18.8926957 L2.20234783,18.8926957 Z M2.20234783,13.5900435 C2.75913043,13.5900435 3.22256522,13.4041739 3.61165217,13.015087 C4.00156522,12.6251739 4.1866087,12.1435652 4.1866087,11.5867826 C4.1866087,11.049 4.00156522,10.5855652 3.61165217,10.1964783 C3.22256522,9.8073913 2.75913043,9.62152174 2.20234783,9.62152174 C1.6463913,9.62152174 1.18295652,9.8073913 0.793043478,10.1964783 C0.403956522,10.5855652 0.218913043,11.049 0.218913043,11.5867826 C0.218913043,12.1435652 0.403956522,12.6251739 0.793043478,13.015087 C1.18295652,13.4041739 1.6463913,13.5900435 2.20234783,13.5900435 L2.20234783,13.5900435 Z M2.20234783,8.30473913 C2.75913043,8.30473913 3.22256522,8.11969565 3.61165217,7.7306087 C4.00156522,7.34069565 4.1866087,6.85908696 4.1866087,6.32130435 C4.1866087,5.76452174 4.00156522,5.30108696 3.61165217,4.912 C3.22256522,4.52291304 2.75913043,4.33704348 2.20234783,4.33704348 C1.6463913,4.33704348 1.18295652,4.52291304 0.793043478,4.912 C0.403956522,5.30108696 0.218913043,5.76452174 0.218913043,6.32130435 C0.218913043,6.85908696 0.403956522,7.34069565 0.793043478,7.7306087 C1.18295652,8.11969565 1.6463913,8.30473913 2.20234783,8.30473913 L2.20234783,8.30473913 Z M5.61408696,18.1326957 C5.68843478,18.1880435 5.76278261,18.2252174 5.85530435,18.2252174 L18.4266957,18.2252174 C18.5200435,18.2252174 18.5935652,18.1880435 18.667913,18.1326957 C18.7232609,18.0583478 18.7604348,17.984 18.7604348,17.8914783 L18.7604348,15.9072174 C18.7604348,15.8146957 18.7232609,15.7403478 18.667913,15.666 C18.5935652,15.6106522 18.5200435,15.5734783 18.4266957,15.5734783 L5.85530435,15.5734783 C5.76278261,15.5734783 5.68843478,15.6106522 5.61408696,15.666 C5.53973913,15.7403478 5.52156522,15.8146957 5.52156522,15.9072174 L5.52156522,17.8914783 C5.52156522,17.984 5.53973913,18.0583478 5.61408696,18.1326957 L5.61408696,18.1326957 Z M5.61408696,12.8292174 C5.68843478,12.8853913 5.76278261,12.9217391 5.85530435,12.9217391 L18.4266957,12.9217391 C18.5200435,12.9217391 18.5935652,12.8853913 18.667913,12.8292174 C18.7232609,12.7548696 18.7604348,12.6813478 18.7604348,12.588 L18.7604348,10.6045652 C18.7604348,10.5120435 18.7232609,10.4376957 18.667913,10.3633478 C18.5935652,10.308 18.5200435,10.2708261 18.4266957,10.2708261 L5.85530435,10.2708261 C5.76278261,10.2708261 5.68843478,10.308 5.61408696,10.3633478 C5.53973913,10.4376957 5.52156522,10.5120435 5.52156522,10.6045652 L5.52156522,12.588 C5.52156522,12.6813478 5.53973913,12.7548696 5.61408696,12.8292174 L5.61408696,12.8292174 Z M5.56517435,7.54473913 C5.6002174,7.60091304 5.63526046,7.63726087 5.67886959,7.63726087 L11.6042606,7.63726087 C11.6482591,7.63726087 11.6829128,7.60091304 11.7179559,7.54473913 C11.7440435,7.4703913 11.761565,7.39686957 11.761565,7.30352174 L11.761565,5.32008696 C11.761565,5.22756522 11.7440435,5.15321739 11.7179559,5.07886957 C11.6829128,5.02352174 11.6482591,4.98634783 11.6042606,4.98634783 L5.67886959,4.98634783 C5.63526046,4.98634783 5.6002174,5.02352174 5.56517435,5.07886957 C5.5301313,5.15321739 5.52156522,5.22756522 5.52156522,5.32008696 L5.52156522,7.30352174 C5.52156522,7.39686957 5.5301313,7.4703913 5.56517435,7.54473913 L5.56517435,7.54473913 Z" id="Fill-125"></path>
+                  <path d="M18.0854492,0.583007812 L20.4648438,0.583007812 L20.4648438,8.5 L18.9233398,8.5 L18.9233398,3.14501953 C18.9233398,2.99104741 18.9251302,2.77531063 18.9287109,2.49780273 C18.9322917,2.22029484 18.934082,2.00634841 18.934082,1.85595703 L17.4355469,8.5 L15.8295898,8.5 L14.3417969,1.85595703 C14.3417969,2.00634841 14.3435872,2.22029484 14.347168,2.49780273 C14.3507487,2.77531063 14.3525391,2.99104741 14.3525391,3.14501953 L14.3525391,8.5 L12.8110352,8.5 L12.8110352,0.583007812 L15.2172852,0.583007812 L16.6567383,6.80810547 L18.0854492,0.583007812 Z" id="M"></path>
+                </g>
+              </svg>
+              <span class="text">Manga List</span>
+            </a>
+                  </div>
+          </div>
+        <a href="/" class="header-title">MyAnimeList.net</a>
+  </div>
+
+  <div class="list-menu-float"><a class="icon-menu profile" href="https://myanimelist.net/profile/nicksingh"
+           style="background-image: url(https://myanimelist.cdn-dena.com/images/questionmark_50.gif);">
+        </a>
+        <a class="icon-menu quick-add List_LightBox" href="https://myanimelist.net/addtolist.php?hidenav=1">
+          <svg class="icon icon-quick-add" width="22px" height="20px" viewBox="0 0 22 20" version="1.1">
+            <g>
+              <path d="M2.03247939,20 C2.60302963,20 3.07792381,19.8093076 3.47663177,19.4074915 C3.87618623,19.0065267 4.0658053,18.5093644 4.0658053,17.9364359 C4.0658053,17.3822361 3.87618623,16.9046538 3.47663177,16.5028377 C3.07792381,16.1018729 2.60302963,15.9111805 2.03247939,15.9111805 C1.46277567,15.9111805 0.987881488,16.1018729 0.588327022,16.5028377 C0.189619069,16.9046538 0,17.3822361 0,17.9364359 C0,18.5093644 0.189619069,19.0065267 0.588327022,19.4074915 C0.987881488,19.8093076 1.46277567,20 2.03247939,20 L2.03247939,20 Z M2.03247939,14.5354711 C2.60302963,14.5354711 3.07792381,14.3439274 3.47663177,13.9429625 C3.87618623,13.5411464 4.0658053,13.0448354 4.0658053,12.4710556 C4.0658053,11.9168558 3.87618623,11.4392736 3.47663177,11.0383087 C3.07792381,10.6373439 2.60302963,10.4458002 2.03247939,10.4458002 C1.46277567,10.4458002 0.987881488,10.6373439 0.588327022,11.0383087 C0.189619069,11.4392736 0,11.9168558 0,12.4710556 C0,13.0448354 0.189619069,13.5411464 0.588327022,13.9429625 C0.987881488,14.3439274 1.46277567,14.5354711 2.03247939,14.5354711 L2.03247939,14.5354711 Z M2.03247939,9.08881952 C2.60302963,9.08881952 3.07792381,8.89812713 3.47663177,8.49716232 C3.87618623,8.0953462 4.0658053,7.59903519 4.0658053,7.04483541 C4.0658053,6.47105562 3.87618623,5.99347333 3.47663177,5.59250851 C3.07792381,5.1915437 2.60302963,5 2.03247939,5 C1.46277567,5 0.987881488,5.1915437 0.588327022,5.59250851 C0.189619069,5.99347333 0,6.47105562 0,7.04483541 C0,7.59903519 0.189619069,8.0953462 0.588327022,8.49716232 C0.987881488,8.89812713 1.46277567,9.08881952 2.03247939,9.08881952 L2.03247939,9.08881952 Z M5.52858098,19.2167991 C5.60476721,19.2738365 5.68095344,19.3121453 5.77576298,19.3121453 L18.6580085,19.3121453 C18.7536645,19.3121453 18.8290042,19.2738365 18.9051905,19.2167991 C18.9619069,19.1401816 19,19.0635641 19,18.9682179 L19,16.9233825 C19,16.8280363 18.9619069,16.7514188 18.9051905,16.6748014 C18.8290042,16.6177639 18.7536645,16.5794552 18.6580085,16.5794552 L5.77576298,16.5794552 C5.68095344,16.5794552 5.60476721,16.6177639 5.52858098,16.6748014 C5.45239474,16.7514188 5.43377144,16.8280363 5.43377144,16.9233825 L5.43377144,18.9682179 C5.43377144,19.0635641 5.45239474,19.1401816 5.52858098,19.2167991 L5.52858098,19.2167991 Z M5.52858098,13.7514188 C5.60476721,13.8093076 5.68095344,13.846765 5.77576298,13.846765 L18.6580085,13.846765 C18.7536645,13.846765 18.8290042,13.8093076 18.9051905,13.7514188 C18.9619069,13.6748014 19,13.5990352 19,13.5028377 L19,11.4588536 C19,11.3635074 18.9619069,11.2868899 18.9051905,11.2102724 C18.8290042,11.153235 18.7536645,11.1149262 18.6580085,11.1149262 L5.77576298,11.1149262 C5.68095344,11.1149262 5.60476721,11.153235 5.52858098,11.2102724 C5.45239474,11.2868899 5.43377144,11.3635074 5.43377144,11.4588536 L5.43377144,13.5028377 C5.43377144,13.5990352 5.45239474,13.6748014 5.52858098,13.7514188 L5.52858098,13.7514188 Z M10.8026738,8.09158253 C10.7995282,8.17185089 10.7855079,8.2384072 10.7658153,8.30561862 C10.7356604,8.36350738 10.7058407,8.40096481 10.6679796,8.40096481 L5.56913312,8.40096481 C5.53160711,8.40096481 5.50145228,8.36350738 5.47129745,8.30561862 C5.44114262,8.22900114 5.43377144,8.15323496 5.43377144,8.05703746 L5.43377144,6.01305335 C5.43377144,5.91770715 5.44114262,5.84108967 5.47129745,5.76447219 C5.50145228,5.70743473 5.53160711,5.66912599 5.56913312,5.66912599 L10.6679796,5.66912599 C10.7058407,5.66912599 10.7356604,5.70743473 10.7658153,5.76447219 C10.7882639,5.84108967 10.8033413,5.91770715 10.8033413,6.01305335 L10.8033413,7.06105502 L14.3461796,7.06105502 L14.3461796,8.09158253 L10.8026733,8.09158253 Z M18,7 L19,7 L19,8 L18,8 L18,7 Z" id="Fill-125"></path>
+              <path d="M12.4669412,5.96329412 L15.2241176,5.96329412 L15.2241176,8.72047059 C15.2241176,8.89888235 15.2834118,9.05294118 15.4141765,9.17205882 C15.5327647,9.30282353 15.6873529,9.36211765 15.8657647,9.36211765 L17.1374118,9.36211765 C17.3036471,9.36211765 17.4577059,9.30282353 17.5768235,9.17205882 C17.7075882,9.05294118 17.7668824,8.89888235 17.7668824,8.72047059 L17.7668824,5.96329412 L20.5240588,5.96329412 C20.7019412,5.96329412 20.8565294,5.904 20.9756471,5.77323529 C21.1058824,5.65464706 21.1657059,5.50005882 21.1657059,5.32164706 L21.1657059,4.05052941 C21.1657059,3.88376471 21.1058824,3.72970588 20.9756471,3.61058824 C20.8565294,3.47982353 20.7019412,3.42052941 20.5240588,3.42052941 L17.7668824,3.42052941 L17.7668824,0.663882353 C17.7668824,0.485470588 17.7075882,0.330882353 17.5768235,0.212294118 C17.4577059,0.0815294118 17.3036471,0.0222352941 17.1374118,0.0222352941 L15.8657647,0.0222352941 C15.6873529,0.0222352941 15.5327647,0.0815294118 15.4141765,0.212294118 C15.2834118,0.330882353 15.2241176,0.485470588 15.2241176,0.663882353 L15.2241176,3.42052941 L12.4669412,3.42052941 C12.2890588,3.42052941 12.1344706,3.47982353 12.0153529,3.61058824 C11.8851176,3.72970588 11.8252941,3.88376471 11.8252941,4.05052941 L11.8252941,5.32164706 C11.8252941,5.50005882 11.8851176,5.65464706 12.0153529,5.77323529 C12.1344706,5.904 12.2890588,5.96329412 12.4669412,5.96329412 Z" id="Fill-41"></path>
+            </g>
+          </svg>
+          <span class="text">Quick Add</span>
+        </a>
+        <a class="icon-menu anime-list" href="https://myanimelist.net/animelist/nicksingh?">
+          <svg class="icon icon-anime-list" width="22px" height="20px" viewBox="0 0 22 20" version="1.1">
+            <g>
+              <path d="M2.20234783,18.8926957 C2.75913043,18.8926957 3.22256522,18.7076522 3.61165217,18.3177391 C4.00156522,17.9286522 4.1866087,17.4462174 4.1866087,16.8902609 C4.1866087,16.3524783 4.00156522,15.8890435 3.61165217,15.4991304 C3.22256522,15.1100435 2.75913043,14.925 2.20234783,14.925 C1.6463913,14.925 1.18295652,15.1100435 0.793043478,15.4991304 C0.403956522,15.8890435 0.218913043,16.3524783 0.218913043,16.8902609 C0.218913043,17.4462174 0.403956522,17.9286522 0.793043478,18.3177391 C1.18295652,18.7076522 1.6463913,18.8926957 2.20234783,18.8926957 L2.20234783,18.8926957 Z M2.20234783,13.5900435 C2.75913043,13.5900435 3.22256522,13.4041739 3.61165217,13.015087 C4.00156522,12.6251739 4.1866087,12.1435652 4.1866087,11.5867826 C4.1866087,11.049 4.00156522,10.5855652 3.61165217,10.1964783 C3.22256522,9.8073913 2.75913043,9.62152174 2.20234783,9.62152174 C1.6463913,9.62152174 1.18295652,9.8073913 0.793043478,10.1964783 C0.403956522,10.5855652 0.218913043,11.049 0.218913043,11.5867826 C0.218913043,12.1435652 0.403956522,12.6251739 0.793043478,13.015087 C1.18295652,13.4041739 1.6463913,13.5900435 2.20234783,13.5900435 L2.20234783,13.5900435 Z M2.20234783,8.30473913 C2.75913043,8.30473913 3.22256522,8.11969565 3.61165217,7.7306087 C4.00156522,7.34069565 4.1866087,6.85908696 4.1866087,6.32130435 C4.1866087,5.76452174 4.00156522,5.30108696 3.61165217,4.912 C3.22256522,4.52291304 2.75913043,4.33704348 2.20234783,4.33704348 C1.6463913,4.33704348 1.18295652,4.52291304 0.793043478,4.912 C0.403956522,5.30108696 0.218913043,5.76452174 0.218913043,6.32130435 C0.218913043,6.85908696 0.403956522,7.34069565 0.793043478,7.7306087 C1.18295652,8.11969565 1.6463913,8.30473913 2.20234783,8.30473913 L2.20234783,8.30473913 Z M5.61408696,18.1326957 C5.68843478,18.1880435 5.76278261,18.2252174 5.85530435,18.2252174 L18.4266957,18.2252174 C18.5200435,18.2252174 18.5935652,18.1880435 18.667913,18.1326957 C18.7232609,18.0583478 18.7604348,17.984 18.7604348,17.8914783 L18.7604348,15.9072174 C18.7604348,15.8146957 18.7232609,15.7403478 18.667913,15.666 C18.5935652,15.6106522 18.5200435,15.5734783 18.4266957,15.5734783 L5.85530435,15.5734783 C5.76278261,15.5734783 5.68843478,15.6106522 5.61408696,15.666 C5.53973913,15.7403478 5.52156522,15.8146957 5.52156522,15.9072174 L5.52156522,17.8914783 C5.52156522,17.984 5.53973913,18.0583478 5.61408696,18.1326957 L5.61408696,18.1326957 Z M5.61408696,12.8292174 C5.68843478,12.8853913 5.76278261,12.9217391 5.85530435,12.9217391 L18.4266957,12.9217391 C18.5200435,12.9217391 18.5935652,12.8853913 18.667913,12.8292174 C18.7232609,12.7548696 18.7604348,12.6813478 18.7604348,12.588 L18.7604348,10.6045652 C18.7604348,10.5120435 18.7232609,10.4376957 18.667913,10.3633478 C18.5935652,10.308 18.5200435,10.2708261 18.4266957,10.2708261 L5.85530435,10.2708261 C5.76278261,10.2708261 5.68843478,10.308 5.61408696,10.3633478 C5.53973913,10.4376957 5.52156522,10.5120435 5.52156522,10.6045652 L5.52156522,12.588 C5.52156522,12.6813478 5.53973913,12.7548696 5.61408696,12.8292174 L5.61408696,12.8292174 Z M5.56517435,7.54473913 C5.6002174,7.60091304 5.63526046,7.63726087 5.67886959,7.63726087 L11.6042606,7.63726087 C11.6482591,7.63726087 11.6829128,7.60091304 11.7179559,7.54473913 C11.7440435,7.4703913 11.761565,7.39686957 11.761565,7.30352174 L11.761565,5.32008696 C11.761565,5.22756522 11.7440435,5.15321739 11.7179559,5.07886957 C11.6829128,5.02352174 11.6482591,4.98634783 11.6042606,4.98634783 L5.67886959,4.98634783 C5.63526046,4.98634783 5.6002174,5.02352174 5.56517435,5.07886957 C5.5301313,5.15321739 5.52156522,5.22756522 5.52156522,5.32008696 L5.52156522,7.30352174 C5.52156522,7.39686957 5.5301313,7.4703913 5.56517435,7.54473913 L5.56517435,7.54473913 Z" id="Fill-125"></path>
+              <path d="M15.0024414,5.50830078 L17.0112305,5.50830078 L16.0229492,2.39306641 L15.0024414,5.50830078 Z M15.1044922,0.583007812 L16.9736328,0.583007812 L19.7773438,8.5 L17.9833984,8.5 L17.4731445,6.87255859 L14.5566406,6.87255859 L14.0087891,8.5 L12.2792969,8.5 L15.1044922,0.583007812 Z" id="A"></path>
+            </g>
+          </svg>
+          <span class="text">Anime List</span>
+        </a>
+        <a class="icon-menu manga-list" href="https://myanimelist.net/mangalist/nicksingh?">
+          <svg class="icon icon-manga-list" width="22px" height="20px" viewBox="0 0 22 20" version="1.1">
+            <g>
+              <path d="M2.20234783,18.8926957 C2.75913043,18.8926957 3.22256522,18.7076522 3.61165217,18.3177391 C4.00156522,17.9286522 4.1866087,17.4462174 4.1866087,16.8902609 C4.1866087,16.3524783 4.00156522,15.8890435 3.61165217,15.4991304 C3.22256522,15.1100435 2.75913043,14.925 2.20234783,14.925 C1.6463913,14.925 1.18295652,15.1100435 0.793043478,15.4991304 C0.403956522,15.8890435 0.218913043,16.3524783 0.218913043,16.8902609 C0.218913043,17.4462174 0.403956522,17.9286522 0.793043478,18.3177391 C1.18295652,18.7076522 1.6463913,18.8926957 2.20234783,18.8926957 L2.20234783,18.8926957 Z M2.20234783,13.5900435 C2.75913043,13.5900435 3.22256522,13.4041739 3.61165217,13.015087 C4.00156522,12.6251739 4.1866087,12.1435652 4.1866087,11.5867826 C4.1866087,11.049 4.00156522,10.5855652 3.61165217,10.1964783 C3.22256522,9.8073913 2.75913043,9.62152174 2.20234783,9.62152174 C1.6463913,9.62152174 1.18295652,9.8073913 0.793043478,10.1964783 C0.403956522,10.5855652 0.218913043,11.049 0.218913043,11.5867826 C0.218913043,12.1435652 0.403956522,12.6251739 0.793043478,13.015087 C1.18295652,13.4041739 1.6463913,13.5900435 2.20234783,13.5900435 L2.20234783,13.5900435 Z M2.20234783,8.30473913 C2.75913043,8.30473913 3.22256522,8.11969565 3.61165217,7.7306087 C4.00156522,7.34069565 4.1866087,6.85908696 4.1866087,6.32130435 C4.1866087,5.76452174 4.00156522,5.30108696 3.61165217,4.912 C3.22256522,4.52291304 2.75913043,4.33704348 2.20234783,4.33704348 C1.6463913,4.33704348 1.18295652,4.52291304 0.793043478,4.912 C0.403956522,5.30108696 0.218913043,5.76452174 0.218913043,6.32130435 C0.218913043,6.85908696 0.403956522,7.34069565 0.793043478,7.7306087 C1.18295652,8.11969565 1.6463913,8.30473913 2.20234783,8.30473913 L2.20234783,8.30473913 Z M5.61408696,18.1326957 C5.68843478,18.1880435 5.76278261,18.2252174 5.85530435,18.2252174 L18.4266957,18.2252174 C18.5200435,18.2252174 18.5935652,18.1880435 18.667913,18.1326957 C18.7232609,18.0583478 18.7604348,17.984 18.7604348,17.8914783 L18.7604348,15.9072174 C18.7604348,15.8146957 18.7232609,15.7403478 18.667913,15.666 C18.5935652,15.6106522 18.5200435,15.5734783 18.4266957,15.5734783 L5.85530435,15.5734783 C5.76278261,15.5734783 5.68843478,15.6106522 5.61408696,15.666 C5.53973913,15.7403478 5.52156522,15.8146957 5.52156522,15.9072174 L5.52156522,17.8914783 C5.52156522,17.984 5.53973913,18.0583478 5.61408696,18.1326957 L5.61408696,18.1326957 Z M5.61408696,12.8292174 C5.68843478,12.8853913 5.76278261,12.9217391 5.85530435,12.9217391 L18.4266957,12.9217391 C18.5200435,12.9217391 18.5935652,12.8853913 18.667913,12.8292174 C18.7232609,12.7548696 18.7604348,12.6813478 18.7604348,12.588 L18.7604348,10.6045652 C18.7604348,10.5120435 18.7232609,10.4376957 18.667913,10.3633478 C18.5935652,10.308 18.5200435,10.2708261 18.4266957,10.2708261 L5.85530435,10.2708261 C5.76278261,10.2708261 5.68843478,10.308 5.61408696,10.3633478 C5.53973913,10.4376957 5.52156522,10.5120435 5.52156522,10.6045652 L5.52156522,12.588 C5.52156522,12.6813478 5.53973913,12.7548696 5.61408696,12.8292174 L5.61408696,12.8292174 Z M5.56517435,7.54473913 C5.6002174,7.60091304 5.63526046,7.63726087 5.67886959,7.63726087 L11.6042606,7.63726087 C11.6482591,7.63726087 11.6829128,7.60091304 11.7179559,7.54473913 C11.7440435,7.4703913 11.761565,7.39686957 11.761565,7.30352174 L11.761565,5.32008696 C11.761565,5.22756522 11.7440435,5.15321739 11.7179559,5.07886957 C11.6829128,5.02352174 11.6482591,4.98634783 11.6042606,4.98634783 L5.67886959,4.98634783 C5.63526046,4.98634783 5.6002174,5.02352174 5.56517435,5.07886957 C5.5301313,5.15321739 5.52156522,5.22756522 5.52156522,5.32008696 L5.52156522,7.30352174 C5.52156522,7.39686957 5.5301313,7.4703913 5.56517435,7.54473913 L5.56517435,7.54473913 Z" id="Fill-125"></path>
+              <path d="M18.0854492,0.583007812 L20.4648438,0.583007812 L20.4648438,8.5 L18.9233398,8.5 L18.9233398,3.14501953 C18.9233398,2.99104741 18.9251302,2.77531063 18.9287109,2.49780273 C18.9322917,2.22029484 18.934082,2.00634841 18.934082,1.85595703 L17.4355469,8.5 L15.8295898,8.5 L14.3417969,1.85595703 C14.3417969,2.00634841 14.3435872,2.22029484 14.347168,2.49780273 C14.3507487,2.77531063 14.3525391,2.99104741 14.3525391,3.14501953 L14.3525391,8.5 L12.8110352,8.5 L12.8110352,0.583007812 L15.2172852,0.583007812 L16.6567383,6.80810547 L18.0854492,0.583007812 Z" id="M"></path>
+            </g>
+          </svg>
+          <span class="text">Manga List</span>
+        </a>
+        <a class="icon-menu history" href="/history/nicksingh">
+          <svg class="icon icon-history" width="21px" height="21px" viewBox="0 0 21 21" version="1.1">
+            <g transform="translate(-1.000000, -154.000000)">
+              <path d="M2.115,162.749 C2.272,162.906 2.452,162.996 2.676,162.996 L8.288,162.996 C8.647,162.996 8.894,162.817 9.028,162.48 C9.163,162.166 9.118,161.874 8.849,161.627 L7.143,159.899 C7.726,159.338 8.4,158.911 9.141,158.619 C9.904,158.328 10.689,158.17 11.497,158.17 C12.373,158.17 13.181,158.35 13.966,158.687 C14.774,159.023 15.448,159.472 16.031,160.056 C16.593,160.639 17.041,161.313 17.378,162.098 C17.715,162.884 17.894,163.715 17.894,164.59 C17.894,165.465 17.715,166.296 17.378,167.081 C17.041,167.867 16.593,168.54 16.031,169.124 C15.448,169.685 14.774,170.134 13.966,170.471 C13.181,170.807 12.373,170.987 11.497,170.987 C10.51,170.987 9.567,170.762 8.669,170.336 C7.794,169.91 7.053,169.303 6.447,168.518 C6.38,168.428 6.29,168.383 6.155,168.361 C6.021,168.361 5.908,168.406 5.841,168.473 L4.113,170.201 C4.045,170.269 4.023,170.358 4.023,170.448 C4,170.56 4.045,170.65 4.09,170.74 C5.01,171.84 6.11,172.693 7.412,173.299 C8.692,173.905 10.061,174.197 11.497,174.197 C12.799,174.197 14.034,173.95 15.223,173.433 C16.413,172.917 17.423,172.244 18.298,171.391 C19.151,170.516 19.825,169.505 20.341,168.316 C20.857,167.126 21.104,165.892 21.104,164.59 C21.104,163.288 20.857,162.054 20.341,160.864 C19.825,159.674 19.151,158.642 18.298,157.789 C17.423,156.913 16.413,156.24 15.223,155.724 C14.034,155.208 12.799,154.961 11.497,154.961 C10.263,154.961 9.073,155.185 7.928,155.657 C6.784,156.128 5.774,156.779 4.876,157.609 L3.237,155.993 C2.99,155.746 2.699,155.679 2.384,155.836 C2.048,155.971 1.868,156.218 1.868,156.577 L1.868,162.188 C1.868,162.413 1.958,162.592 2.115,162.749 L2.115,162.749 Z M8.4,166.879 C8.467,166.947 8.579,166.992 8.692,166.992 L12.687,166.992 C12.799,166.992 12.911,166.947 12.979,166.879 C13.046,166.812 13.091,166.7 13.091,166.588 L13.091,160.999 C13.091,160.886 13.046,160.774 12.979,160.707 C12.911,160.639 12.799,160.595 12.687,160.595 L11.901,160.595 C11.789,160.595 11.677,160.639 11.61,160.707 C11.542,160.774 11.497,160.886 11.497,160.999 L11.497,165.398 L8.692,165.398 C8.579,165.398 8.467,165.443 8.4,165.51 C8.332,165.577 8.288,165.69 8.288,165.802 L8.288,166.588 C8.288,166.7 8.332,166.812 8.4,166.879 L8.4,166.879 Z" id="icon_menu_side_history" sketch:type="MSShapeGroup"></path>
+            </g>
+          </svg>
+          <span class="text">History</span>
+        </a>
+        <form action="https://myanimelist.net/logout.php" method="post">
+          <a class="icon-menu logout" href="javascript:void(0);" onclick="$(this).parent().submit();">
+            <svg class="icon icon-logout" width="20px" height="17px" viewBox="0 0 20 17" version="1.1">
+              <g transform="translate(-2.000000, -306.000000)">
+                <path d="M3.121,321.395 C3.817,322.091 4.67,322.45 5.658,322.45 L9.676,322.45 C9.788,322.45 9.878,322.428 9.923,322.36 C9.99,322.315 10.035,322.226 10.057,322.136 C10.08,322.024 10.08,321.911 10.102,321.844 C10.102,321.754 10.102,321.642 10.08,321.507 L10.08,321.26 C10.08,321.193 10.057,321.126 10.057,321.081 C10.035,321.036 10.012,321.013 9.967,320.969 C9.923,320.946 9.878,320.924 9.855,320.901 C9.833,320.879 9.788,320.879 9.721,320.879 C9.653,320.856 9.608,320.856 9.563,320.856 L9.406,320.856 L9.272,320.856 L5.658,320.856 C5.119,320.856 4.648,320.654 4.244,320.273 C3.862,319.869 3.66,319.397 3.66,318.859 L3.66,310.015 C3.66,309.476 3.862,309.005 4.244,308.601 C4.648,308.219 5.119,308.017 5.658,308.017 L9.676,308.017 C9.788,308.017 9.878,307.995 9.923,307.928 C9.99,307.883 10.035,307.793 10.057,307.703 C10.08,307.591 10.08,307.479 10.102,307.411 C10.102,307.322 10.102,307.209 10.08,307.075 L10.08,306.828 C10.08,306.716 10.035,306.626 9.945,306.536 C9.878,306.469 9.788,306.424 9.676,306.424 L5.658,306.424 C4.67,306.424 3.817,306.783 3.121,307.479 C2.426,308.197 2.066,309.027 2.066,310.038 L2.066,318.836 C2.066,319.846 2.426,320.677 3.121,321.395 L3.121,321.395 Z M7.117,317.4 C7.274,317.557 7.454,317.647 7.678,317.647 L13.289,317.647 L13.289,321.238 C13.289,321.462 13.379,321.642 13.536,321.799 C13.693,321.956 13.873,322.046 14.097,322.046 C14.299,322.046 14.501,321.956 14.659,321.799 L21.46,314.998 C21.617,314.841 21.707,314.661 21.707,314.437 C21.707,314.212 21.617,314.033 21.46,313.876 L14.659,307.075 C14.501,306.918 14.299,306.828 14.097,306.828 C13.873,306.828 13.693,306.918 13.536,307.075 C13.379,307.232 13.289,307.411 13.289,307.636 L13.289,311.227 L7.678,311.227 C7.454,311.227 7.274,311.317 7.117,311.474 C6.96,311.631 6.87,311.811 6.87,312.035 L6.87,316.839 C6.87,317.063 6.96,317.243 7.117,317.4 L7.117,317.4 Z" id="icon_menu_side_logout" sketch:type="MSShapeGroup"></path>
+              </g>
+            </svg>
+            <span class="text">Logout</span>
+          </a>
+        </form></div>  <div id="list-container" class="list-container">
+
+        <div class="cover-block">
+      <div id="cover-image-container" class="image-container">
+                <img id="cover-image" src="https://myanimelist.cdn-dena.com/s/common/uploaded_files/1455540405-b2e2bf20e11b68631e8439b44d9a51c7.png">
+      </div>
+    </div>
+
+
+
+<div id="status-menu" class="status-menu-container">
+  <div class="status-menu"><a href="https://myanimelist.net/animelist/Aruminde?status=7"
+         class="status-button all_anime ">All Anime</a><a href="https://myanimelist.net/animelist/Aruminde?status=1"
+         class="status-button watching ">Currently Watching</a><a href="https://myanimelist.net/animelist/Aruminde?status=2"
+         class="status-button completed on">Completed</a><a href="https://myanimelist.net/animelist/Aruminde?status=3"
+         class="status-button onhold ">On Hold</a><a href="https://myanimelist.net/animelist/Aruminde?status=4"
+         class="status-button dropped ">Dropped</a><a href="https://myanimelist.net/animelist/Aruminde?status=6"
+         class="status-button plantowatch ">Plan to Watch</a><div class="search-container">
+      <div id="search-box" ><input type="text" value=""></div>
+      <a id="search-button" href="javascript: void(0);">
+        <i class="fa fa-search"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <div class="list-block">
+
+
+
+
+
+<div class="list-unit completed">
+  <div class="list-status-title">
+    <span class="text">COMPLETED</span>
+    <span class="stats">
+      <a href="javascript: void(0);" id="show-stats-button"><i class="fa fa-bar-chart"></i> Stats</a>
+      <a href="javascript: void(0);" id="advanced-options-button"><i class="fa fa-filter"></i> Filters</a>
+    </span>
+  </div>
+  <div class="list-stats">
+    TV: 46,
+    OVA: 3,
+    Movies: 4,
+    <span title="Specials">Spcl.</span>: 0,
+    Eps: 3717,
+    Days: 61.38,
+    Mean Score: 8.6,
+    Score <span title="Deviation">Dev.</span>: 0.57
+  </div>
+
+  <table class="list-table" data-items="[{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:24,&quot;anime_title&quot;:&quot;Accel World&quot;,&quot;anime_num_episodes&quot;:24,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:11759,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/11759\/Accel_World\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/11759\/Accel_World&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/8\/38155.webp?s=a3c1c92a7ee22462b3bbaef91d3e728f&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:&quot;10-15-13&quot;,&quot;finish_date_string&quot;:&quot;11-01-13&quot;,&quot;anime_start_date_string&quot;:&quot;04-07-12&quot;,&quot;anime_end_date_string&quot;:&quot;09-22-12&quot;,&quot;days_string&quot;:18,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:10,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:24,&quot;anime_title&quot;:&quot;Akatsuki no Yona&quot;,&quot;anime_num_episodes&quot;:24,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:25013,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:true,&quot;has_promotion_video&quot;:false,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/25013\/Akatsuki_no_Yona\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/25013\/Akatsuki_no_Yona&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/9\/64225.webp?s=fd7cff79725cc1fe7fad82d5fe11d72b&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;10-07-14&quot;,&quot;anime_end_date_string&quot;:&quot;03-24-15&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:9,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:12,&quot;anime_title&quot;:&quot;Aldnoah.Zero&quot;,&quot;anime_num_episodes&quot;:12,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:22729,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:true,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/22729\/AldnoahZero\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/22729\/AldnoahZero&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/7\/60263.webp?s=6988aa1b31c6216f882121a3f2499d52&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;R&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;07-06-14&quot;,&quot;anime_end_date_string&quot;:&quot;09-21-14&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:9,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:12,&quot;anime_title&quot;:&quot;Aldnoah.Zero 2nd Season&quot;,&quot;anime_num_episodes&quot;:12,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:27655,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:true,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/27655\/AldnoahZero_2nd_Season\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/27655\/AldnoahZero_2nd_Season&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/10\/71297.webp?s=dbb3dbafbb19cdc354e5f21f9336e30b&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;R&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;01-11-15&quot;,&quot;anime_end_date_string&quot;:&quot;03-29-15&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:13,&quot;anime_title&quot;:&quot;Angel Beats!&quot;,&quot;anime_num_episodes&quot;:13,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:6547,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/6547\/Angel_Beats\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/6547\/Angel_Beats&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/10\/22061.webp?s=f84255d4a593b53de7f6f37a694de646&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;04-03-10&quot;,&quot;anime_end_date_string&quot;:&quot;06-26-10&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:10,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:11,&quot;anime_title&quot;:&quot;Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.&quot;,&quot;anime_num_episodes&quot;:11,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:9989,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/9989\/Ano_Hi_Mita_Hana_no_Namae_wo_Bokutachi_wa_Mada_Shiranai\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/9989\/Ano_Hi_Mita_Hana_no_Namae_wo_Bokutachi_wa_Mada_Shiranai&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/5\/79697.webp?s=06c13364cce0a2c2d35782975af06cd1&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;04-15-11&quot;,&quot;anime_end_date_string&quot;:&quot;06-24-11&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:12,&quot;anime_title&quot;:&quot;Another&quot;,&quot;anime_num_episodes&quot;:12,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:11111,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:true,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/11111\/Another\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/11111\/Another&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/4\/75509.webp?s=0771b66559b2db80c9944dc272adf0a8&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;R&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:&quot;08-25-13&quot;,&quot;anime_start_date_string&quot;:&quot;01-10-12&quot;,&quot;anime_end_date_string&quot;:&quot;03-27-12&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:1,&quot;anime_title&quot;:&quot;Another: The Other - Inga&quot;,&quot;anime_num_episodes&quot;:1,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:11701,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/11701\/Another__The_Other_-_Inga\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/11701\/Another__The_Other_-_Inga&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/9\/42051.webp?s=2a0568c2ff00917474b93ab6e4768db3&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;OVA&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;R&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:&quot;10-16-13&quot;,&quot;anime_start_date_string&quot;:&quot;05-26-12&quot;,&quot;anime_end_date_string&quot;:&quot;05-26-12&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:9,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:1,&quot;anime_title&quot;:&quot;Black\u2605Rock Shooter (OVA)&quot;,&quot;anime_num_episodes&quot;:1,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:7059,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:false,&quot;has_video&quot;:false,&quot;video_url&quot;:&quot;\/anime\/7059\/Black%E2%98%85Rock_Shooter_OVA\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/7059\/Black\u2605Rock_Shooter_OVA&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/6\/22417.webp?s=7c44cfc02e96cbfd9ac22ebd7bf1d9f8&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;OVA&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;07-24-10&quot;,&quot;anime_end_date_string&quot;:&quot;07-24-10&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:8,&quot;anime_title&quot;:&quot;Black\u2605Rock Shooter (TV)&quot;,&quot;anime_num_episodes&quot;:8,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:11285,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/11285\/Black%E2%98%85Rock_Shooter_TV\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/11285\/Black\u2605Rock_Shooter_TV&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/5\/53909.webp?s=f7707ede85d07afe8ad76bf55ea891c1&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;02-03-12&quot;,&quot;anime_end_date_string&quot;:&quot;03-23-12&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:366,&quot;anime_title&quot;:&quot;Bleach&quot;,&quot;anime_num_episodes&quot;:366,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:269,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:true,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/269\/Bleach\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/269\/Bleach&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/3\/40451.webp?s=ee21135c15af7da00192c3d5b6e8286f&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:&quot;09-18-13&quot;,&quot;anime_start_date_string&quot;:&quot;10-05-04&quot;,&quot;anime_end_date_string&quot;:&quot;03-27-12&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:6,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:&quot;&quot;,&quot;num_watched_episodes&quot;:12,&quot;anime_title&quot;:&quot;Btooom!&quot;,&quot;anime_num_episodes&quot;:12,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:14345,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/14345\/Btooom\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/14345\/Btooom&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/4\/40977.webp?s=79a3f227d405e8ce2dc4583b7677f111&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;R&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;10-04-12&quot;,&quot;anime_end_date_string&quot;:&quot;12-20-12&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:9,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:3,&quot;anime_title&quot;:&quot;Byousoku 5 Centimeter&quot;,&quot;anime_num_episodes&quot;:3,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:1689,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/1689\/Byousoku_5_Centimeter\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/1689\/Byousoku_5_Centimeter&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/6\/73426.webp?s=d855da4ba5c3f9230af20b2a0d72caf9&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;Movie&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:&quot;07-28-14&quot;,&quot;anime_start_date_string&quot;:&quot;03-03-07&quot;,&quot;anime_end_date_string&quot;:&quot;03-03-07&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:10,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:25,&quot;anime_title&quot;:&quot;Chihayafuru&quot;,&quot;anime_num_episodes&quot;:25,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:10800,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:true,&quot;has_promotion_video&quot;:false,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/10800\/Chihayafuru\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/10800\/Chihayafuru&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/3\/35749.webp?s=662d6f54c901ac14dc4ddf8abd799cd6&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:&quot;08-22-13&quot;,&quot;finish_date_string&quot;:&quot;08-25-13&quot;,&quot;anime_start_date_string&quot;:&quot;10-05-11&quot;,&quot;anime_end_date_string&quot;:&quot;03-28-12&quot;,&quot;days_string&quot;:4,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:10,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:25,&quot;anime_title&quot;:&quot;Chihayafuru 2&quot;,&quot;anime_num_episodes&quot;:25,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:14397,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:true,&quot;has_promotion_video&quot;:false,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/14397\/Chihayafuru_2\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/14397\/Chihayafuru_2&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/6\/47435.webp?s=a7c2830c10444d5a6d27f9791f142910&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:&quot;08-25-13&quot;,&quot;finish_date_string&quot;:&quot;08-28-13&quot;,&quot;anime_start_date_string&quot;:&quot;01-12-13&quot;,&quot;anime_end_date_string&quot;:&quot;06-29-13&quot;,&quot;days_string&quot;:4,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:1,&quot;anime_title&quot;:&quot;Chihayafuru 2: Waga Mi Yo ni Furu Nagame Seshi Ma ni&quot;,&quot;anime_num_episodes&quot;:1,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:18745,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:false,&quot;has_video&quot;:false,&quot;video_url&quot;:&quot;\/anime\/18745\/Chihayafuru_2__Waga_Mi_Yo_ni_Furu_Nagame_Seshi_Ma_ni\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/18745\/Chihayafuru_2__Waga_Mi_Yo_ni_Furu_Nagame_Seshi_Ma_ni&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/13\/54451.webp?s=7274e57445cba11fb4c3743d714583fd&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;OVA&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;09-13-13&quot;,&quot;anime_end_date_string&quot;:&quot;09-13-13&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:7,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:12,&quot;anime_title&quot;:&quot;Chuunibyou demo Koi ga Shitai!&quot;,&quot;anime_num_episodes&quot;:12,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:14741,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/14741\/Chuunibyou_demo_Koi_ga_Shitai\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/14741\/Chuunibyou_demo_Koi_ga_Shitai&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/12\/46931.webp?s=2c060b8f05ff9db80771d444ab4b0b3e&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;10-04-12&quot;,&quot;anime_end_date_string&quot;:&quot;12-20-12&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:23,&quot;anime_title&quot;:&quot;Clannad&quot;,&quot;anime_num_episodes&quot;:23,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:2167,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/2167\/Clannad\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/2167\/Clannad&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/13\/8498.webp?s=434f3cfa11c77ec4504b1480d5f4445d&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;10-05-07&quot;,&quot;anime_end_date_string&quot;:&quot;03-28-08&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:10,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:24,&quot;anime_title&quot;:&quot;Clannad: After Story&quot;,&quot;anime_num_episodes&quot;:24,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:4181,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/4181\/Clannad__After_Story\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/4181\/Clannad__After_Story&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/13\/24647.webp?s=7ae42a62ce6fe0dc5734a7d52fdcfa17&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;10-03-08&quot;,&quot;anime_end_date_string&quot;:&quot;03-27-09&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:9,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:&quot;&quot;,&quot;num_watched_episodes&quot;:25,&quot;anime_title&quot;:&quot;Code Geass: Hangyaku no Lelouch&quot;,&quot;anime_num_episodes&quot;:25,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:1575,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/1575\/Code_Geass__Hangyaku_no_Lelouch\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/1575\/Code_Geass__Hangyaku_no_Lelouch&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/5\/50331.webp?s=9f5ae826089bc8b3fdc06e732b655614&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;R&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:&quot;06-30-14&quot;,&quot;anime_start_date_string&quot;:&quot;10-06-06&quot;,&quot;anime_end_date_string&quot;:&quot;07-29-07&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;High&quot;},{&quot;status&quot;:2,&quot;score&quot;:9,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:&quot;&quot;,&quot;num_watched_episodes&quot;:25,&quot;anime_title&quot;:&quot;Code Geass: Hangyaku no Lelouch R2&quot;,&quot;anime_num_episodes&quot;:25,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:2904,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/2904\/Code_Geass__Hangyaku_no_Lelouch_R2\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/2904\/Code_Geass__Hangyaku_no_Lelouch_R2&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/4\/9391.webp?s=520774c6158f5e1cd71531295335aa2d&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;R&quot;,&quot;start_date_string&quot;:&quot;06-30-14&quot;,&quot;finish_date_string&quot;:&quot;07-03-14&quot;,&quot;anime_start_date_string&quot;:&quot;04-06-08&quot;,&quot;anime_end_date_string&quot;:&quot;09-28-08&quot;,&quot;days_string&quot;:4,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;High&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:&quot;&quot;,&quot;num_watched_episodes&quot;:13,&quot;anime_title&quot;:&quot;Coppelion&quot;,&quot;anime_num_episodes&quot;:13,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:9479,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/9479\/Coppelion\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/9479\/Coppelion&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/4\/75543.webp?s=1e7a9b2515d3dab116b77d639ca5bd7e&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:&quot;01-02-15&quot;,&quot;anime_start_date_string&quot;:&quot;10-02-13&quot;,&quot;anime_end_date_string&quot;:&quot;12-25-13&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:9,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:&quot;&quot;,&quot;num_watched_episodes&quot;:13,&quot;anime_title&quot;:&quot;Danganronpa: Kibou no Gakuen to Zetsubou no Koukousei The Animation&quot;,&quot;anime_num_episodes&quot;:13,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:16592,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/16592\/Danganronpa__Kibou_no_Gakuen_to_Zetsubou_no_Koukousei_The_Animation\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/16592\/Danganronpa__Kibou_no_Gakuen_to_Zetsubou_no_Koukousei_The_Animation&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/4\/51463.webp?s=43cf6787df344aa473f561f6581ab0d6&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;R&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:&quot;10-15-13&quot;,&quot;anime_start_date_string&quot;:&quot;07-05-13&quot;,&quot;anime_end_date_string&quot;:&quot;09-27-13&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:37,&quot;anime_title&quot;:&quot;Death Note&quot;,&quot;anime_num_episodes&quot;:37,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:1535,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/1535\/Death_Note\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/1535\/Death_Note&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/9\/9453.webp?s=786dfb74ff7cd8b85a16d9b00093bb4b&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;R&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;10-04-06&quot;,&quot;anime_end_date_string&quot;:&quot;06-27-07&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:9,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:&quot;&quot;,&quot;num_watched_episodes&quot;:175,&quot;anime_title&quot;:&quot;Fairy Tail&quot;,&quot;anime_num_episodes&quot;:175,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:6702,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/6702\/Fairy_Tail\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/6702\/Fairy_Tail&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/5\/18179.webp?s=bba052f743e1e8578829a0e8269172fc&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;10-12-09&quot;,&quot;anime_end_date_string&quot;:&quot;03-30-13&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;High&quot;},{&quot;status&quot;:2,&quot;score&quot;:10,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:&quot;&quot;,&quot;num_watched_episodes&quot;:64,&quot;anime_title&quot;:&quot;Fullmetal Alchemist: Brotherhood&quot;,&quot;anime_num_episodes&quot;:64,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:5114,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/5114\/Fullmetal_Alchemist__Brotherhood\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/5114\/Fullmetal_Alchemist__Brotherhood&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/5\/47421.webp?s=9ef3e67e587dc91b06f41ebb389d5f9d&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;R&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;04-05-09&quot;,&quot;anime_end_date_string&quot;:&quot;07-04-10&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;High&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:25,&quot;anime_title&quot;:&quot;Ghost Hunt&quot;,&quot;anime_num_episodes&quot;:25,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:1571,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/1571\/Ghost_Hunt\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/1571\/Ghost_Hunt&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/11\/73908.webp?s=baee447c9673341be159da5c07b561f3&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;10-04-06&quot;,&quot;anime_end_date_string&quot;:&quot;03-28-07&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:7,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:13,&quot;anime_title&quot;:&quot;Gokukoku no Brynhildr&quot;,&quot;anime_num_episodes&quot;:13,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:21431,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:true,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/21431\/Gokukoku_no_Brynhildr\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/21431\/Gokukoku_no_Brynhildr&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/5\/61433.webp?s=91b7a804748532737f3b9f959cb4db05&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;R+&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;04-06-14&quot;,&quot;anime_end_date_string&quot;:&quot;06-29-14&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:10,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:148,&quot;anime_title&quot;:&quot;Hunter x Hunter (2011)&quot;,&quot;anime_num_episodes&quot;:148,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:11061,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:true,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/11061\/Hunter_x_Hunter_2011\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/11061\/Hunter_x_Hunter_2011&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/11\/33657.webp?s=e5bb4d4d4749b30f4fc8f208efaf5a9b&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;10-02-11&quot;,&quot;anime_end_date_string&quot;:&quot;09-24-14&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Medium&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:&quot;&quot;,&quot;num_watched_episodes&quot;:22,&quot;anime_title&quot;:&quot;Hyouka&quot;,&quot;anime_num_episodes&quot;:22,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:12189,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/12189\/Hyouka\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/12189\/Hyouka&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/13\/50521.webp?s=2d99155033e711171759b38be93ed9e9&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;04-23-12&quot;,&quot;anime_end_date_string&quot;:&quot;09-17-12&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Medium&quot;},{&quot;status&quot;:2,&quot;score&quot;:10,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:1,&quot;anime_title&quot;:&quot;Kaguya-hime no Monogatari&quot;,&quot;anime_num_episodes&quot;:1,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:16664,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/16664\/Kaguya-hime_no_Monogatari\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/16664\/Kaguya-hime_no_Monogatari&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/5\/65925.webp?s=f3188483508f54b712bcdc439f3e70c0&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;Movie&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;G&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;11-23-13&quot;,&quot;anime_end_date_string&quot;:&quot;11-23-13&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:10,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:1,&quot;anime_title&quot;:&quot;Kimi no Na wa.&quot;,&quot;anime_num_episodes&quot;:1,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:32281,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/32281\/Kimi_no_Na_wa\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/32281\/Kimi_no_Na_wa&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/5\/87048.webp?s=1113e6e8f2c4f1b51b5f9ffeda1ab334&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;Movie&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;08-26-16&quot;,&quot;anime_end_date_string&quot;:&quot;08-26-16&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:10,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:&quot;&quot;,&quot;num_watched_episodes&quot;:24,&quot;anime_title&quot;:&quot;Kiseijuu: Sei no Kakuritsu&quot;,&quot;anime_num_episodes&quot;:24,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:22535,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:true,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/22535\/Kiseijuu__Sei_no_Kakuritsu\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/22535\/Kiseijuu__Sei_no_Kakuritsu&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/3\/73178.webp?s=ad0b1bb43825acd8d037abe837f9810b&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;R&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:&quot;05-30-15&quot;,&quot;anime_start_date_string&quot;:&quot;10-09-14&quot;,&quot;anime_end_date_string&quot;:&quot;03-26-15&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:13,&quot;anime_title&quot;:&quot;Kokoro Connect&quot;,&quot;anime_num_episodes&quot;:13,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:11887,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:true,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/11887\/Kokoro_Connect\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/11887\/Kokoro_Connect&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/2\/39665.webp?s=59dcef6f876509c622f1515966601976&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;07-08-12&quot;,&quot;anime_end_date_string&quot;:&quot;09-30-12&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:7,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:12,&quot;anime_title&quot;:&quot;Kotoura-san&quot;,&quot;anime_num_episodes&quot;:12,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:15379,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/15379\/Kotoura-san\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/15379\/Kotoura-san&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/10\/75585.webp?s=34e9c4e84e4bbac5f4f324ecb4fc5c97&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:&quot;09-20-13&quot;,&quot;anime_start_date_string&quot;:&quot;01-11-13&quot;,&quot;anime_end_date_string&quot;:&quot;03-29-13&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:7,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:&quot;&quot;,&quot;num_watched_episodes&quot;:26,&quot;anime_title&quot;:&quot;Mirai Nikki (TV)&quot;,&quot;anime_num_episodes&quot;:26,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:10620,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/10620\/Mirai_Nikki_TV\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/10620\/Mirai_Nikki_TV&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/13\/33465.webp?s=a366f5b1f7f402aa18052aff9bae9faa&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;R+&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;10-09-11&quot;,&quot;anime_end_date_string&quot;:&quot;04-15-12&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Medium&quot;},{&quot;status&quot;:2,&quot;score&quot;:9,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:220,&quot;anime_title&quot;:&quot;Naruto&quot;,&quot;anime_num_episodes&quot;:220,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:20,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:true,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/20\/Naruto\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/20\/Naruto&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/13\/17405.webp?s=c23eb30b7cf2fec842b4d8a9f13b5536&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;10-03-02&quot;,&quot;anime_end_date_string&quot;:&quot;02-08-07&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:9,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:500,&quot;anime_title&quot;:&quot;Naruto: Shippuuden&quot;,&quot;anime_num_episodes&quot;:500,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:1735,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:true,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/1735\/Naruto__Shippuuden\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/1735\/Naruto__Shippuuden&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/5\/17407.webp?s=7bc9184c40a4852a423f61263d5b1c86&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;02-15-07&quot;,&quot;anime_end_date_string&quot;:&quot;03-23-17&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:9,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:22,&quot;anime_title&quot;:&quot;Robotics;Notes&quot;,&quot;anime_num_episodes&quot;:22,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:13599,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/13599\/Robotics_Notes\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/13599\/Robotics_Notes&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/10\/42013.webp?s=5d2035a2c6d49f2706146593feac4347&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;10-12-12&quot;,&quot;anime_end_date_string&quot;:&quot;03-22-13&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:&quot;&quot;,&quot;num_watched_episodes&quot;:12,&quot;anime_title&quot;:&quot;Sengoku Basara&quot;,&quot;anime_num_episodes&quot;:12,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:5355,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/5355\/Sengoku_Basara\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/5355\/Sengoku_Basara&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/4\/21849.webp?s=029f6f7b9e2bff4e2eb663b2e43c35e4&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:&quot;07-28-14&quot;,&quot;anime_start_date_string&quot;:&quot;04-02-09&quot;,&quot;anime_end_date_string&quot;:&quot;06-18-09&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:12,&quot;anime_title&quot;:&quot;Sengoku Basara Two&quot;,&quot;anime_num_episodes&quot;:12,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:6634,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/6634\/Sengoku_Basara_Two\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/6634\/Sengoku_Basara_Two&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/6\/80999.webp?s=e44d58becf21a6763013e3dcce781237&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;07-11-10&quot;,&quot;anime_end_date_string&quot;:&quot;09-26-10&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:9,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:&quot;&quot;,&quot;num_watched_episodes&quot;:22,&quot;anime_title&quot;:&quot;Shigatsu wa Kimi no Uso&quot;,&quot;anime_num_episodes&quot;:22,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:23273,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/23273\/Shigatsu_wa_Kimi_no_Uso\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/23273\/Shigatsu_wa_Kimi_no_Uso&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/3\/67177.webp?s=b755623c4ba20e090cafdc9534a983ba&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;10-10-14&quot;,&quot;anime_end_date_string&quot;:&quot;03-20-15&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Medium&quot;},{&quot;status&quot;:2,&quot;score&quot;:10,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:&quot;&quot;,&quot;num_watched_episodes&quot;:25,&quot;anime_title&quot;:&quot;Shingeki no Kyojin&quot;,&quot;anime_num_episodes&quot;:25,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:16498,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/16498\/Shingeki_no_Kyojin\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/16498\/Shingeki_no_Kyojin&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/10\/47347.webp?s=7851c23410adc4042a813df306464d77&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;R&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:&quot;10-15-13&quot;,&quot;anime_start_date_string&quot;:&quot;04-07-13&quot;,&quot;anime_end_date_string&quot;:&quot;09-29-13&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:10,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:12,&quot;anime_title&quot;:&quot;Shingeki no Kyojin Season 2&quot;,&quot;anime_num_episodes&quot;:12,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:25777,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/25777\/Shingeki_no_Kyojin_Season_2\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/25777\/Shingeki_no_Kyojin_Season_2&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/4\/84177.webp?s=b4214057a6372b7254ed48e561bb00df&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;R&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;04-01-17&quot;,&quot;anime_end_date_string&quot;:&quot;06-17-17&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:10,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:24,&quot;anime_title&quot;:&quot;Steins;Gate&quot;,&quot;anime_num_episodes&quot;:24,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:9253,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/9253\/Steins_Gate\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/9253\/Steins_Gate&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/5\/73199.webp?s=92f4a721cdca80834c23511ecd0c422f&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;04-06-11&quot;,&quot;anime_end_date_string&quot;:&quot;09-14-11&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:1,&quot;anime_title&quot;:&quot;Steins;Gate Movie: Fuka Ryouiki no D\u00e9j\u00e0 vu&quot;,&quot;anime_num_episodes&quot;:1,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:11577,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/11577\/Steins_Gate_Movie__Fuka_Ryouiki_no_D%C3%A9j%C3%A0_vu\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/11577\/Steins_Gate_Movie__Fuka_Ryouiki_no_D\u00e9j\u00e0_vu&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/3\/50317.webp?s=a1a58a222a5a9788ad3a7e833e2723b9&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;Movie&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;04-20-13&quot;,&quot;anime_end_date_string&quot;:&quot;04-20-13&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:25,&quot;anime_title&quot;:&quot;Sword Art Online&quot;,&quot;anime_num_episodes&quot;:25,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:11757,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:true,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/11757\/Sword_Art_Online\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/11757\/Sword_Art_Online&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/11\/39717.webp?s=78537934d66e201bddbb077c374cbe9b&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;07-08-12&quot;,&quot;anime_end_date_string&quot;:&quot;12-23-12&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:7,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:24,&quot;anime_title&quot;:&quot;Sword Art Online II&quot;,&quot;anime_num_episodes&quot;:24,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:21881,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:true,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/21881\/Sword_Art_Online_II\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/21881\/Sword_Art_Online_II&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/11\/65185.webp?s=3317a9c7cd152f21f41fddb80409e8fa&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:&quot;03-12-15&quot;,&quot;anime_start_date_string&quot;:&quot;07-05-14&quot;,&quot;anime_end_date_string&quot;:&quot;12-20-14&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:12,&quot;anime_title&quot;:&quot;Tokyo Ghoul&quot;,&quot;anime_num_episodes&quot;:12,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:22319,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/22319\/Tokyo_Ghoul\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/22319\/Tokyo_Ghoul&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/5\/64449.webp?s=eecdebc7522f6af8e3304a84c7bdee1c&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;R&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:&quot;09-24-14&quot;,&quot;anime_start_date_string&quot;:&quot;07-04-14&quot;,&quot;anime_end_date_string&quot;:&quot;09-19-14&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:8,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:25,&quot;anime_title&quot;:&quot;Toradora!&quot;,&quot;anime_num_episodes&quot;:25,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:4224,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:true,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/4224\/Toradora\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/4224\/Toradora&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/13\/22128.webp?s=004f4f80736e2add52c4e1986dc2bc66&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:&quot;09-14-13&quot;,&quot;anime_start_date_string&quot;:&quot;10-02-08&quot;,&quot;anime_end_date_string&quot;:&quot;03-26-09&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:7,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:13,&quot;anime_title&quot;:&quot;True Tears&quot;,&quot;anime_num_episodes&quot;:13,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:2129,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/2129\/True_Tears\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/2129\/True_Tears&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/8\/18578.webp?s=c516e576f0b9576b50a9f1b966855979&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;01-06-08&quot;,&quot;anime_end_date_string&quot;:&quot;03-30-08&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:9,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:12,&quot;anime_title&quot;:&quot;Watashi ga Motenai no wa Dou Kangaetemo Omaera ga Warui!&quot;,&quot;anime_num_episodes&quot;:12,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:16742,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/16742\/Watashi_ga_Motenai_no_wa_Dou_Kangaetemo_Omaera_ga_Warui\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/16742\/Watashi_ga_Motenai_no_wa_Dou_Kangaetemo_Omaera_ga_Warui&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/12\/51619.webp?s=c671f1bb25a9ef09a06c77645e59f341&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:null,&quot;anime_start_date_string&quot;:&quot;07-09-13&quot;,&quot;anime_end_date_string&quot;:&quot;09-24-13&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;},{&quot;status&quot;:2,&quot;score&quot;:9,&quot;tags&quot;:&quot;&quot;,&quot;is_rewatching&quot;:0,&quot;num_watched_episodes&quot;:24,&quot;anime_title&quot;:&quot;Zetsuen no Tempest&quot;,&quot;anime_num_episodes&quot;:24,&quot;anime_airing_status&quot;:2,&quot;anime_id&quot;:14075,&quot;anime_studios&quot;:null,&quot;anime_licensors&quot;:null,&quot;anime_season&quot;:null,&quot;has_episode_video&quot;:false,&quot;has_promotion_video&quot;:true,&quot;has_video&quot;:true,&quot;video_url&quot;:&quot;\/anime\/14075\/Zetsuen_no_Tempest\/video&quot;,&quot;anime_url&quot;:&quot;\/anime\/14075\/Zetsuen_no_Tempest&quot;,&quot;anime_image_path&quot;:&quot;https:\/\/myanimelist.cdn-dena.com\/r\/96x136\/images\/anime\/7\/42453.webp?s=645e369b10db94fd160dc8a1fd6c7e94&quot;,&quot;is_added_to_list&quot;:false,&quot;anime_media_type_string&quot;:&quot;TV&quot;,&quot;anime_mpaa_rating_string&quot;:&quot;PG-13&quot;,&quot;start_date_string&quot;:null,&quot;finish_date_string&quot;:&quot;09-15-13&quot;,&quot;anime_start_date_string&quot;:&quot;10-05-12&quot;,&quot;anime_end_date_string&quot;:&quot;03-29-13&quot;,&quot;days_string&quot;:null,&quot;storage_string&quot;:&quot;&quot;,&quot;priority_string&quot;:&quot;Low&quot;}]">
+        <tbody><tr class="list-table-header"><th class="header-title status"></th><th class="header-title number">#</th><th class="header-title image"><a class="link hover_info">Image</a></th><th class="header-title title"><a href="https://myanimelist.net/animelist/Aruminde?status=2&amp;order=1&amp;order2=0" class="link sort">
+            Anime Title
+                      </a></th><th class="header-title score"><a href="https://myanimelist.net/animelist/Aruminde?status=2&amp;order=4&amp;order2=0" class="link sort">
+            Score
+                      </a></th><th class="header-title type"><a href="https://myanimelist.net/animelist/Aruminde?status=2&amp;order=6&amp;order2=0" class="link sort">
+            Type
+                      </a></th><th class="header-title progress"><a href="https://myanimelist.net/animelist/Aruminde?status=2&amp;order=12&amp;order2=0" class="link sort">
+            Progress
+                      </a></th><th class="header-title tags">
+          Tags
+                  </th></tr></tbody>
+    <tbody class="list-item" style="display: none;" v-for="(item, i) in items">
+      <tr class="list-table-data">
+        <td class="data status" :class="getStatusClass(item)"></td>
+                <td class="data number">${ i + 1 }</td>
+
+                <td class="data image">
+          <a :href="item.anime_url" class="link sort">
+            <img :src="item.anime_image_path" class="hover-info image">
+          </a>
+        </td>
+
+        <td class="data title clearfix">
+          <a :href="item.anime_url" class="link sort">${ item.anime_title }</a>
+          <a v-if="item.has_episode_video" :href="item.video_url" class="icon-watch ml4" title="Watch Episode Video">Watch Episode Video</a>
+                    <span class="rewatching" v-show="item.status == 2 && item.is_rewatching == 1">
+            ${ item.status == 2 && item.is_rewatching == 1 ? "Re-watching" : "" }
+          </span>
+          <span class="content-status" v-show="getContentStatusText(item)">
+            ${ getContentStatusText(item) }
+          </span>
+                    <div class="add-edit-more">
+            <span v-if="item.is_added_to_list" class="edit">
+              <a :href="'/ownlist/anime/'+item.anime_id+'/edit?hideLayout'" class="List_LightBox">Edit</a>
+            </span>
+            <span v-if="!item.is_added_to_list" class="add">
+              <a :href="'/ownlist/anime/add?selected_series_id='+item.anime_id+'&hideLayout'" class="List_LightBox">Add</a>
+            </span>
+            -
+            <span class="more">
+              <a href="#" @click.prevent="showMore(item)">More</a>
+            </span>
+          </div>
+        </td>
+
+                <td class="data score">
+          <a href="#" @click.prevent="!canEdit || (item.isScoreInEdit = true)" v-show="!item.isScoreInEdit"
+            :class="classObject" class="link">
+            ${ item.score != 0 ? item.score : "-" }
+          </a>
+          <transition name="edit" v-on:enter="editTransition">
+          <select v-model="item.score" v-if="item.isScoreInEdit"
+            @focusout="item.isScoreInEdit = false" @blur="item.isScoreInEdit = false" @change="editScore(item)">
+            <option value="0">-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select>
+          </transition>
+        </td>
+
+                <td class="data type">
+          ${ item.anime_media_type_string }
+        </td>
+
+                <td class="data progress">
+          <div :class="'progress-'+item.anime_id">
+            <span v-if="!getIsCompleted(item)">
+              <a href="#" @click.prevent="!canEdit || (item.isEpisodeInEdit = true)"
+                v-if="!item.isEpisodeInEdit" :class="classObject"
+                class="link">${ item.num_watched_episodes == 0 ? "-" : item.num_watched_episodes }</a>
+              <transition name="edit" v-on:enter="editTransition">
+              <input v-model="item.num_watched_episodes" v-if="item.isEpisodeInEdit"
+              @change="editEpisode(item)" @focusout="item.isEpisodeInEdit = false" @blur="item.isEpisodeInEdit = false"
+              type="text" style="width:30px;">
+              </transition>
+              /
+            </span>
+            <span>${ item.anime_num_episodes == 0 ? "-" : item.anime_num_episodes }</span>
+            <a href="#" v-if="!getIsCompleted(item) && canEdit" @click.prevent="!canEdit || incrementEpisode(item)" class="icon-add-episode">
+              <i class="fa fa-plus-circle"></i>
+            </a>
+          </div>
+        </td>
+
+                <td class="data tags" :id="'tags-'+item.anime_id">
+          <div v-if="!item.isTagInEdit" :class="'tags-'+item.anime_id">
+            <span v-for="(tag, i) in getParsedTags(item)">${ i!=0 ? ", " : "" }<a :href="generateTagPath(tag)">${ tag }</a></span>
+          </div>
+          <transition name="edit" v-on:enter="editTransition">
+          <textarea v-model="item.tags" v-if="item.isTagInEdit"
+            @change="editTag(item)" @keydown.13="editTag(item)" @focusout="item.isTagInEdit=false" @blur="item.isTagInEdit=false"></textarea>
+          </transition>
+          <a @click.prevent="item.isTagInEdit = true" v-if="canEdit && !item.isTagInEdit" href="#" class="edit">Edit</a>
+        </td>
+
+
+
+
+
+
+
+
+
+              </tr>
+      <tr :id="'more-'+item.anime_id" class="more-info">
+        <td colspan="8" class="more-content">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="loading-space">
+    <i id="loading-spinner" class="fa fa-spinner fa-spin"></i>
+  </div>
+</div>
+          </div>
+  </div>
+  <footer>
+    <div id="footer-block">
+      <div id="copyright">
+        MyAnimeList.net is a property of MyAnimeList, LLC. &copy;2015 All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript">
+    window.MAL.magia = "06410c4e6b2518e9add8f6df0ccb2da2876bb8c980aacb43a8dcaa8153c0f92c";
+  window.MAL.madoka = "hZrDKm9k6FVRnqd3i%=K";
+
+  window.MAL.SLVK = "g4OvMLVOmEI3J8u7dt8f8+mAuualsqCo";
+  window.MAL.CDN_URL = "https://myanimelist.cdn-dena.com";
+
+  window.MAL.CURRENT_TUTORIAL_STEP_ID = 1;
+  window.MAL.USER_NAME = "nicksingh"
+</script>
+</body>
+</html>
